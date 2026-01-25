@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1200" width="1440" height="1200">
+  <defs>
+    <style>
+      .frame { fill: #ffffff; stroke: #e2e8f0; stroke-width: 2; }
+      .section { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; }
+      .text-lg { font-family: system-ui, sans-serif; font-size: 24px; fill: #1e293b; }
+      .text-md { font-family: system-ui, sans-serif; font-size: 18px; fill: #475569; }
+      .text-sm { font-family: system-ui, sans-serif; font-size: 14px; fill: #64748b; }
+      .text-xl { font-family: system-ui, sans-serif; font-size: 36px; fill: #0f172a; font-weight: bold; }
+      .text-h2 { font-family: system-ui, sans-serif; font-size: 24px; fill: #1e293b; font-weight: 600; }
+      .text-body { font-family: system-ui, sans-serif; font-size: 16px; fill: #475569; line-height: 1.6; }
+      .btn-secondary { fill: #f1f5f9; stroke: #cbd5e1; stroke-width: 1; rx: 8; }
+      .card { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1; rx: 12; }
+      .content-area { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1; rx: 8; }
+      .text-white { fill: #ffffff; }
+      .divider { stroke: #e2e8f0; stroke-width: 1; }
+      .text-muted { fill: #94a3b8; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="1200" fill="#ffffff"/>
+
+  <!-- ==================== HEADER ==================== -->
+  <g id="header">
+    <rect x="0" y="0" width="1440" height="80" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Logo -->
+    <circle cx="140" cy="40" r="20" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <text x="170" y="48" class="text-lg" font-weight="bold">Motekita</text>
+
+    <!-- Navigation -->
+    <text x="500" y="46" class="text-md">Features</text>
+    <text x="620" y="46" class="text-md">Pricing</text>
+    <text x="720" y="46" class="text-md">FAQ</text>
+    <text x="800" y="46" class="text-md">Download</text>
+
+    <!-- Language Switcher -->
+    <rect x="1150" y="24" width="80" height="32" class="btn-secondary"/>
+    <text x="1170" y="46" class="text-sm">JA / EN</text>
+
+    <!-- Download Button -->
+    <rect x="1260" y="20" width="120" height="40" fill="#0f172a" rx="8"/>
+    <text x="1285" y="46" class="text-sm text-white">Download</text>
+  </g>
+
+  <!-- ==================== PAGE TITLE ==================== -->
+  <g id="page-title">
+    <rect x="0" y="80" width="1440" height="120" fill="#f8fafc"/>
+    <text x="720" y="155" class="text-xl" text-anchor="middle">Riyou Kiyaku / Privacy Policy</text>
+  </g>
+
+  <!-- ==================== CONTENT AREA ==================== -->
+  <g id="content">
+    <rect x="220" y="240" width="1000" height="760" class="content-area"/>
+
+    <!-- Last Updated -->
+    <text x="260" y="290" class="text-sm text-muted">Saishu koushin: 2025 nen 1 gatsu</text>
+
+    <!-- Section 1 -->
+    <text x="260" y="350" class="text-h2">1. Hajimeni</text>
+    <rect x="260" y="370" width="920" height="60" fill="#f8fafc" rx="4"/>
+    <text x="280" y="400" class="text-body">Kono riyou kiyaku wa, Motekita (ika "honpuri") no</text>
+    <text x="280" y="420" class="text-body">riyou jouken wo sadameru mono desu.</text>
+
+    <!-- Section 2 -->
+    <text x="260" y="490" class="text-h2">2. Teigi</text>
+    <rect x="260" y="510" width="920" height="80" fill="#f8fafc" rx="4"/>
+    <text x="280" y="540" class="text-body">Honkiyaku ni oite, ikano yougo wa ikano imi wo</text>
+    <text x="280" y="560" class="text-body">yuu suru mono to shimasu.</text>
+    <text x="280" y="580" class="text-body">- "Riyousha": Honpuri wo riyou suru kojin...</text>
+
+    <!-- Section 3 -->
+    <text x="260" y="650" class="text-h2">3. Riyou Jouken</text>
+    <rect x="260" y="670" width="920" height="80" fill="#f8fafc" rx="4"/>
+    <text x="280" y="700" class="text-body">Riyousha wa, honkiyaku ni doui shita ue de,</text>
+    <text x="280" y="720" class="text-body">honpuri wo riyou suru mono to shimasu.</text>
+    <text x="280" y="740" class="text-body">Riyousha ga mijukusha no baai...</text>
+
+    <!-- Section 4 -->
+    <text x="260" y="810" class="text-h2">4. Kinshi Jikou</text>
+    <rect x="260" y="830" width="920" height="100" fill="#f8fafc" rx="4"/>
+    <text x="280" y="860" class="text-body">Riyousha wa, honpuri no riyou ni atatte,</text>
+    <text x="280" y="880" class="text-body">ika no koui wo okonatte wa narimasen.</text>
+    <text x="280" y="900" class="text-body">- Hourei ni ihan suru koui</text>
+    <text x="280" y="920" class="text-body">- Hontou no kenri wo shingai suru koui...</text>
+
+    <!-- More content indicator -->
+    <text x="720" y="980" class="text-sm text-muted" text-anchor="middle">... (ika shou ryaku) ...</text>
+  </g>
+
+  <!-- ==================== FOOTER ==================== -->
+  <g id="footer">
+    <rect x="0" y="1040" width="1440" height="160" fill="#f8fafc"/>
+    <line x1="0" y1="1040" x2="1440" y2="1040" class="divider"/>
+
+    <!-- Logo -->
+    <circle cx="140" cy="1100" r="16" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <text x="165" y="1108" class="text-md" font-weight="bold">Motekita</text>
+
+    <!-- Links -->
+    <text x="500" y="1100" class="text-sm">Riyou Kiyaku</text>
+    <text x="620" y="1100" class="text-sm">Privacy Policy</text>
+    <text x="780" y="1100" class="text-sm">OSS License</text>
+    <text x="920" y="1100" class="text-sm">FAQ</text>
+    <text x="980" y="1100" class="text-sm">Contact</text>
+
+    <!-- GitHub -->
+    <rect x="1200" y="1080" width="100" height="40" class="btn-secondary"/>
+    <text x="1220" y="1106" class="text-sm">GitHub</text>
+
+    <!-- Copyright -->
+    <text x="720" y="1160" class="text-sm" text-anchor="middle">© 2025 Motekita. MIT License.</text>
+  </g>
+</svg>

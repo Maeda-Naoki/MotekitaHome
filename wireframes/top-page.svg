@@ -1,0 +1,245 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 2800" width="1440" height="2800">
+  <defs>
+    <style>
+      .frame { fill: #ffffff; stroke: #e2e8f0; stroke-width: 2; }
+      .section { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; }
+      .header { fill: #1e293b; }
+      .text-lg { font-family: system-ui, sans-serif; font-size: 24px; fill: #1e293b; }
+      .text-md { font-family: system-ui, sans-serif; font-size: 18px; fill: #475569; }
+      .text-sm { font-family: system-ui, sans-serif; font-size: 14px; fill: #64748b; }
+      .text-xl { font-family: system-ui, sans-serif; font-size: 48px; fill: #0f172a; font-weight: bold; }
+      .text-hero { font-family: system-ui, sans-serif; font-size: 56px; fill: #0f172a; font-weight: bold; }
+      .btn-primary { fill: #0f172a; rx: 8; }
+      .btn-secondary { fill: #f1f5f9; stroke: #cbd5e1; stroke-width: 1; rx: 8; }
+      .card { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1; rx: 12; }
+      .card-highlight { fill: #0f172a; rx: 12; }
+      .icon-placeholder { fill: #e2e8f0; rx: 8; }
+      .dog-placeholder { fill: #fef3c7; stroke: #f59e0b; stroke-width: 2; rx: 50%; }
+      .text-white { fill: #ffffff; }
+      .text-primary { fill: #0f172a; }
+      .divider { stroke: #e2e8f0; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="2800" fill="#ffffff"/>
+
+  <!-- ==================== HEADER ==================== -->
+  <g id="header">
+    <rect x="0" y="0" width="1440" height="80" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Logo -->
+    <circle cx="140" cy="40" r="20" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <text x="170" y="48" class="text-lg" font-weight="bold">Motekita</text>
+
+    <!-- Navigation -->
+    <text x="500" y="46" class="text-md">Features</text>
+    <text x="620" y="46" class="text-md">Pricing</text>
+    <text x="720" y="46" class="text-md">FAQ</text>
+    <text x="800" y="46" class="text-md">Download</text>
+
+    <!-- Language Switcher -->
+    <rect x="1150" y="24" width="80" height="32" class="btn-secondary"/>
+    <text x="1170" y="46" class="text-sm">JA / EN</text>
+
+    <!-- Download Button -->
+    <rect x="1260" y="20" width="120" height="40" class="btn-primary"/>
+    <text x="1285" y="46" class="text-sm text-white">Download</text>
+  </g>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <g id="hero">
+    <rect x="0" y="80" width="1440" height="600" fill="#fefce8"/>
+
+    <!-- Hero Text -->
+    <text x="120" y="280" class="text-hero">Mail ga kitara,</text>
+    <text x="120" y="350" class="text-hero">Inu ga oshieru</text>
+    <text x="120" y="420" class="text-md">Kawaii Golden Retriever ga mail tsuchi wo otodoke suru</text>
+    <text x="120" y="450" class="text-md">desktop app. Privacy jushi no kanzen local shori.</text>
+
+    <!-- CTA Buttons -->
+    <rect x="120" y="500" width="200" height="56" class="btn-primary"/>
+    <text x="160" y="536" class="text-md text-white">Muryou Download</text>
+
+    <rect x="340" y="500" width="160" height="56" class="btn-secondary"/>
+    <text x="380" y="536" class="text-md">Shoukai</text>
+
+    <!-- Dog Illustration Placeholder -->
+    <ellipse cx="1050" cy="380" rx="250" ry="220" class="dog-placeholder"/>
+    <text x="980" y="390" class="text-lg" fill="#92400e">Dog Image</text>
+  </g>
+
+  <!-- ==================== FEATURES SECTION ==================== -->
+  <g id="features">
+    <rect x="0" y="680" width="1440" height="700" fill="#ffffff"/>
+
+    <!-- Section Title -->
+    <text x="720" y="760" class="text-xl" text-anchor="middle">Kinou Shoukai</text>
+    <text x="720" y="800" class="text-md" text-anchor="middle">Motekita no omona tokucho</text>
+
+    <!-- Feature Cards Row 1 -->
+    <g id="feature-1">
+      <rect x="120" y="860" width="360" height="220" class="card"/>
+      <rect x="160" y="900" width="60" height="60" class="icon-placeholder"/>
+      <text x="160" y="1000" class="text-lg">Kanzen Local Shori</text>
+      <text x="160" y="1030" class="text-sm">Data wa subete PC ni hozon.</text>
+      <text x="160" y="1050" class="text-sm">Gaibu server ni okuru koto nashi.</text>
+    </g>
+
+    <g id="feature-2">
+      <rect x="540" y="860" width="360" height="220" class="card"/>
+      <rect x="580" y="900" width="60" height="60" class="icon-placeholder"/>
+      <text x="580" y="1000" class="text-lg">Keiryou Sekkei</text>
+      <text x="580" y="1030" class="text-sm">Memory 50MB miman,</text>
+      <text x="580" y="1050" class="text-sm">CPU 1% miman de ugoku.</text>
+    </g>
+
+    <g id="feature-3">
+      <rect x="960" y="860" width="360" height="220" class="card"/>
+      <rect x="1000" y="900" width="60" height="60" class="icon-placeholder"/>
+      <text x="1000" y="1000" class="text-lg">Cross Platform</text>
+      <text x="1000" y="1030" class="text-sm">Windows, macOS, Linux</text>
+      <text x="1000" y="1050" class="text-sm">subete ni taiou.</text>
+    </g>
+
+    <!-- Feature Cards Row 2 -->
+    <g id="feature-4">
+      <rect x="120" y="1120" width="360" height="220" class="card"/>
+      <rect x="160" y="1160" width="60" height="60" class="icon-placeholder"/>
+      <text x="160" y="1260" class="text-lg">Privacy Jushi</text>
+      <text x="160" y="1290" class="text-sm">Mail honbun wa issai</text>
+      <text x="160" y="1310" class="text-sm">shutoku shimasen.</text>
+    </g>
+
+    <g id="feature-5">
+      <rect x="540" y="1120" width="360" height="220" class="card"/>
+      <rect x="580" y="1160" width="60" height="60" class="icon-placeholder"/>
+      <text x="580" y="1260" class="text-lg">Kawaii Animation</text>
+      <text x="580" y="1290" class="text-sm">Golden Retriever ga</text>
+      <text x="580" y="1310" class="text-sm">kawaii ugoki de oshiraseru.</text>
+    </g>
+
+    <g id="feature-6">
+      <rect x="960" y="1120" width="360" height="220" class="card"/>
+      <rect x="1000" y="1160" width="60" height="60" class="icon-placeholder"/>
+      <text x="1000" y="1260" class="text-lg">System Tray Jochu</text>
+      <text x="1000" y="1290" class="text-sm">Background de shizuka ni</text>
+      <text x="1000" y="1310" class="text-sm">ugoki tsudzukemasu.</text>
+    </g>
+  </g>
+
+  <!-- ==================== PRICING SECTION ==================== -->
+  <g id="pricing">
+    <rect x="0" y="1380" width="1440" height="600" fill="#f8fafc"/>
+
+    <!-- Section Title -->
+    <text x="720" y="1460" class="text-xl" text-anchor="middle">Ryoukin Plan</text>
+    <text x="720" y="1500" class="text-md" text-anchor="middle">Shinguru na ryoukin taikei</text>
+
+    <!-- Free Plan Card -->
+    <g id="plan-free">
+      <rect x="320" y="1560" width="360" height="380" class="card"/>
+      <text x="500" y="1620" class="text-lg" text-anchor="middle">Free</text>
+      <text x="500" y="1680" class="text-xl" text-anchor="middle">0 yen</text>
+      <line x1="360" y1="1720" x2="640" y2="1720" class="divider"/>
+      <text x="380" y="1760" class="text-sm">Gmail taiou</text>
+      <text x="380" y="1790" class="text-sm">Kihon animation</text>
+      <text x="380" y="1820" class="text-sm">System tray jochu</text>
+      <text x="380" y="1850" class="text-sm">Mugen mail tsuchi</text>
+      <rect x="380" y="1880" width="240" height="44" class="btn-secondary"/>
+      <text x="455" y="1908" class="text-sm">Download</text>
+    </g>
+
+    <!-- Premium Plan Card -->
+    <g id="plan-premium">
+      <rect x="760" y="1540" width="360" height="420" class="card-highlight"/>
+      <rect x="880" y="1550" width="120" height="28" fill="#fbbf24" rx="14"/>
+      <text x="910" y="1570" class="text-sm" fill="#78350f">Osusume</text>
+      <text x="940" y="1620" class="text-lg text-white" text-anchor="middle">Premium</text>
+      <text x="940" y="1680" class="text-xl text-white" text-anchor="middle">500 yen</text>
+      <text x="940" y="1710" class="text-sm text-white" text-anchor="middle">kaikiri</text>
+      <line x1="800" y1="1740" x2="1080" y2="1740" stroke="#374151"/>
+      <text x="820" y="1780" class="text-sm text-white">Free no subete</text>
+      <text x="820" y="1810" class="text-sm text-white">Spam hantei</text>
+      <text x="820" y="1840" class="text-sm text-white">Outlook taiou</text>
+      <text x="820" y="1870" class="text-sm text-white">Yuusen support</text>
+      <rect x="820" y="1900" width="240" height="44" fill="#fbbf24" rx="8"/>
+      <text x="885" y="1928" class="text-sm" fill="#78350f">Kounyuu suru</text>
+    </g>
+  </g>
+
+  <!-- ==================== SYSTEM REQUIREMENTS ==================== -->
+  <g id="requirements">
+    <rect x="0" y="1980" width="1440" height="360" fill="#ffffff"/>
+
+    <!-- Section Title -->
+    <text x="720" y="2060" class="text-xl" text-anchor="middle">System Youken</text>
+
+    <!-- OS Cards -->
+    <g id="os-windows">
+      <rect x="200" y="2110" width="280" height="180" class="card"/>
+      <rect x="300" y="2140" width="80" height="50" class="icon-placeholder"/>
+      <text x="340" y="2220" class="text-lg" text-anchor="middle">Windows</text>
+      <text x="340" y="2250" class="text-sm" text-anchor="middle">Windows 10/11</text>
+      <text x="340" y="2275" class="text-sm" text-anchor="middle">64-bit</text>
+    </g>
+
+    <g id="os-macos">
+      <rect x="580" y="2110" width="280" height="180" class="card"/>
+      <rect x="680" y="2140" width="80" height="50" class="icon-placeholder"/>
+      <text x="720" y="2220" class="text-lg" text-anchor="middle">macOS</text>
+      <text x="720" y="2250" class="text-sm" text-anchor="middle">macOS 11+</text>
+      <text x="720" y="2275" class="text-sm" text-anchor="middle">Intel / Apple Silicon</text>
+    </g>
+
+    <g id="os-linux">
+      <rect x="960" y="2110" width="280" height="180" class="card"/>
+      <rect x="1060" y="2140" width="80" height="50" class="icon-placeholder"/>
+      <text x="1100" y="2220" class="text-lg" text-anchor="middle">Linux</text>
+      <text x="1100" y="2250" class="text-sm" text-anchor="middle">Ubuntu 20.04+</text>
+      <text x="1100" y="2275" class="text-sm" text-anchor="middle">Fedora, Debian</text>
+    </g>
+  </g>
+
+  <!-- ==================== DOWNLOAD SECTION ==================== -->
+  <g id="download">
+    <rect x="0" y="2340" width="1440" height="260" fill="#0f172a"/>
+
+    <text x="720" y="2420" class="text-xl text-white" text-anchor="middle">Ima sugu Download</text>
+    <text x="720" y="2460" class="text-md text-white" text-anchor="middle" opacity="0.8">Muryou de hajimeyou</text>
+
+    <!-- Download Buttons -->
+    <rect x="420" y="2500" width="180" height="50" fill="#ffffff" rx="8"/>
+    <text x="470" y="2532" class="text-sm">Windows</text>
+
+    <rect x="630" y="2500" width="180" height="50" fill="#ffffff" rx="8"/>
+    <text x="690" y="2532" class="text-sm">macOS</text>
+
+    <rect x="840" y="2500" width="180" height="50" fill="#ffffff" rx="8"/>
+    <text x="905" y="2532" class="text-sm">Linux</text>
+  </g>
+
+  <!-- ==================== FOOTER ==================== -->
+  <g id="footer">
+    <rect x="0" y="2600" width="1440" height="200" fill="#f8fafc"/>
+    <line x1="0" y1="2600" x2="1440" y2="2600" class="divider"/>
+
+    <!-- Logo -->
+    <circle cx="140" cy="2680" r="16" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <text x="165" y="2688" class="text-md" font-weight="bold">Motekita</text>
+
+    <!-- Links -->
+    <text x="500" y="2680" class="text-sm">Riyou Kiyaku</text>
+    <text x="620" y="2680" class="text-sm">Privacy Policy</text>
+    <text x="780" y="2680" class="text-sm">OSS License</text>
+    <text x="920" y="2680" class="text-sm">FAQ</text>
+    <text x="980" y="2680" class="text-sm">Contact</text>
+
+    <!-- GitHub -->
+    <rect x="1200" y="2660" width="100" height="40" class="btn-secondary"/>
+    <text x="1220" y="2686" class="text-sm">GitHub</text>
+
+    <!-- Copyright -->
+    <text x="720" y="2760" class="text-sm" text-anchor="middle">© 2025 Motekita. MIT License.</text>
+  </g>
+</svg>
