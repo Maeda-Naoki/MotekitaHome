@@ -1,0 +1,84 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Changelog - Motekita"
+  description="Motekita version history"
+>
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h1 class="text-3xl sm:text-4xl font-bold">Changelog</h1>
+        <p class="mt-4 text-lg text-muted-foreground">
+          Motekita version history
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <!-- Version 1.0.0 -->
+        <div class="relative pl-8 pb-12 border-l-2 border-muted last:pb-0">
+          <div class="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] rounded-full bg-primary"></div>
+          <div class="mb-2">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary text-primary-foreground">
+              v1.0.0
+            </span>
+            <span class="ml-3 text-sm text-muted-foreground">January 2025</span>
+          </div>
+          <h3 class="text-xl font-semibold mt-4 mb-3">Initial Release</h3>
+          <ul class="space-y-2 text-muted-foreground">
+            <li class="flex items-start gap-2">
+              <span class="text-green-500 mt-1">✓</span>
+              <span>New email detection via Gmail IMAP connection</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-500 mt-1">✓</span>
+              <span>Golden Retriever animation notifications</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-500 mt-1">✓</span>
+              <span>System tray resident</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-500 mt-1">✓</span>
+              <span>Windows / macOS / Linux support</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-500 mt-1">✓</span>
+              <span>Complete local processing for privacy</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Coming Soon -->
+        <div class="relative pl-8 pb-12 border-l-2 border-muted border-dashed last:pb-0">
+          <div class="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] rounded-full bg-muted border-2 border-muted-foreground"></div>
+          <div class="mb-2">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-muted text-muted-foreground">
+              Coming Soon
+            </span>
+          </div>
+          <h3 class="text-xl font-semibold mt-4 mb-3">Planned Features</h3>
+          <ul class="space-y-2 text-muted-foreground">
+            <li class="flex items-start gap-2">
+              <span class="text-muted-foreground mt-1">○</span>
+              <span>Spam detection (Premium)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-muted-foreground mt-1">○</span>
+              <span>Outlook support (Premium)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-muted-foreground mt-1">○</span>
+              <span>Additional dog breeds DLC</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-muted-foreground mt-1">○</span>
+              <span>Costume system DLC</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

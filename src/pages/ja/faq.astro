@@ -1,0 +1,70 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const faqs = [
+  {
+    question: 'Motekitaはどのようなアプリですか？',
+    answer: 'Motekitaは、メールの受信を監視し、かわいい犬のアニメーションで通知するデスクトップアプリです。単なる通知ツールではなく「犬と遊んでいる感覚」を提供することを目指しています。',
+  },
+  {
+    question: 'メールの内容は見られますか？',
+    answer: 'いいえ。Motekitaはメール本文を一切取得しません。送信者名とメールアドレス、件名のみを取得します。プライバシーを最優先に設計されています。',
+  },
+  {
+    question: 'どのメールサービスに対応していますか？',
+    answer: '無料版ではGmailに対応しています。有料版（プレミアム）ではOutlookにも対応します。',
+  },
+  {
+    question: 'データはどこに保存されますか？',
+    answer: 'すべてのデータはお使いのパソコンにローカルで保存されます。外部サーバーにデータを送信することはありません。認証情報はOSのセキュアストレージ（WindowsのCredential Manager、macOSのKeychainなど）に暗号化して保存されます。',
+  },
+  {
+    question: '無料版と有料版の違いは何ですか？',
+    answer: '無料版はGmailの通知と基本的な犬のアニメーションが使えます。有料版（500円買い切り）では、スパム判定機能とOutlook対応が追加されます。',
+  },
+  {
+    question: 'DLC（追加コンテンツ）とは何ですか？',
+    answer: 'DLCでは追加の犬種（柴犬、ハスキーなど）や衣装を購入できます。これらは純粋にカスタマイズ用で、アプリの基本機能には影響しません。',
+  },
+  {
+    question: 'アプリの動作が重くなりませんか？',
+    answer: 'Motekitaはメモリ使用量50MB未満、CPU使用率1%未満を目標に設計されています。バックグラウンドで動作しても、パソコンの動作に影響を与えにくい軽量設計です。',
+  },
+  {
+    question: 'サポートを受けるにはどうすればいいですか？',
+    answer: 'GitHubリポジトリでIssueを作成するか、お問い合わせページからご連絡ください。',
+  },
+];
+---
+
+<BaseLayout
+  title="よくある質問 - Motekita"
+  description="Motekitaに関するよくある質問と回答"
+>
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h1 class="text-3xl sm:text-4xl font-bold">よくある質問</h1>
+        <p class="mt-4 text-lg text-muted-foreground">
+          Motekitaについてのよくある質問をまとめました
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        {faqs.map((faq) => (
+          <details class="group bg-background rounded-lg border p-6">
+            <summary class="flex cursor-pointer items-center justify-between font-medium list-none">
+              <span>{faq.question}</span>
+              <span class="ml-4 shrink-0 transition-transform group-open:rotate-180">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <p class="mt-4 text-muted-foreground">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

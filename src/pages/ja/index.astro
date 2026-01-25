@@ -1,0 +1,19 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/home/Hero.astro';
+import Features from '@/components/home/Features.astro';
+import Pricing from '@/components/home/Pricing.astro';
+import SystemRequirements from '@/components/home/SystemRequirements.astro';
+import Download from '@/components/home/Download.astro';
+---
+
+<BaseLayout
+  title="Motekita - メールが届くと、犬が教えてくれる"
+  description="かわいいゴールデンレトリバーがメール通知をお届けするデスクトップアプリ。Windows/macOS/Linux対応。完全ローカル処理でプライバシー重視。"
+>
+  <Hero />
+  <Features />
+  <Pricing />
+  <SystemRequirements />
+  <Download />
+</BaseLayout>

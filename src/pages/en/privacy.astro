@@ -1,0 +1,84 @@
+---
+import MarkdownLayout from '@/layouts/MarkdownLayout.astro';
+---
+
+<MarkdownLayout
+  title="Privacy Policy - Motekita"
+  description="Privacy Policy for Motekita"
+>
+  <p>Last updated: January 2025</p>
+
+  <h2>1. Introduction</h2>
+  <p>
+    Motekita ("the Application") is designed with user privacy as the top priority.
+    This Privacy Policy explains how the Application handles data.
+  </p>
+
+  <h2>2. Information We Collect</h2>
+  <p>
+    The Application only retrieves the following information:
+  </p>
+  <ul>
+    <li><strong>Email metadata</strong>: Sender name, sender email address, and subject only</li>
+    <li><strong>Account settings</strong>: Email account connection information</li>
+    <li><strong>App settings</strong>: Notification settings, display settings, etc.</li>
+  </ul>
+  <p>
+    <strong>Important</strong>: Email content is never retrieved or stored.
+  </p>
+
+  <h2>3. Data Storage Location</h2>
+  <p>
+    All data is stored locally on your device:
+  </p>
+  <ul>
+    <li>Authentication credentials: OS secure storage (Keychain / Credential Manager, etc.)</li>
+    <li>App settings: Local SQLite database</li>
+    <li>Cache: Temporary in-memory storage only</li>
+  </ul>
+
+  <h2>4. Data Transmission</h2>
+  <p>
+    The Application does not transmit data to external servers.
+    All processing is performed locally on your device.
+  </p>
+  <p>
+    However, the following communications do occur:
+  </p>
+  <ul>
+    <li>Connection to email servers (Gmail, Outlook, etc.): For email reception checks</li>
+    <li>License authentication server: For Premium version purchase verification (optional)</li>
+  </ul>
+
+  <h2>5. Third-Party Disclosure</h2>
+  <p>
+    We do not sell, rent, or provide your personal information to third parties.
+  </p>
+
+  <h2>6. Security</h2>
+  <p>
+    The Application is designed with security in mind:
+  </p>
+  <ul>
+    <li>Authentication credentials are encrypted and stored in OS secure storage</li>
+    <li>Communication with email servers is encrypted via TLS/SSL</li>
+    <li>Sensitive data in memory is cleared when the app closes</li>
+  </ul>
+
+  <h2>7. Children's Privacy</h2>
+  <p>
+    The Application is not intended for children under 13 years of age.
+    We do not knowingly collect personal information from children under 13.
+  </p>
+
+  <h2>8. Policy Changes</h2>
+  <p>
+    This Privacy Policy may be changed without prior notice.
+    Significant changes will be announced within the Application or on the official website.
+  </p>
+
+  <h2>9. Contact</h2>
+  <p>
+    If you have any questions or concerns about privacy, please contact us via GitHub Issue or the contact form.
+  </p>
+</MarkdownLayout>

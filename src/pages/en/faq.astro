@@ -1,0 +1,70 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const faqs = [
+  {
+    question: 'What is Motekita?',
+    answer: 'Motekita is a desktop application that monitors email reception and notifies you with cute dog animations. It aims to provide a "playing with a dog" experience rather than just being a notification tool.',
+  },
+  {
+    question: 'Can you see my email content?',
+    answer: 'No. Motekita never retrieves email content. It only retrieves the sender name, email address, and subject line. It is designed with privacy as the top priority.',
+  },
+  {
+    question: 'Which email services are supported?',
+    answer: 'The free version supports Gmail. The Premium version also supports Outlook.',
+  },
+  {
+    question: 'Where is my data stored?',
+    answer: 'All data is stored locally on your computer. No data is sent to external servers. Authentication credentials are encrypted and stored in your OS secure storage (Windows Credential Manager, macOS Keychain, etc.).',
+  },
+  {
+    question: 'What\'s the difference between free and paid versions?',
+    answer: 'The free version includes Gmail notifications and basic dog animations. The Premium version ($5 one-time) adds spam detection and Outlook support.',
+  },
+  {
+    question: 'What is DLC (additional content)?',
+    answer: 'DLC allows you to purchase additional dog breeds (Shiba Inu, Husky, etc.) and costumes. These are purely for customization and do not affect the app\'s core functionality.',
+  },
+  {
+    question: 'Will the app slow down my computer?',
+    answer: 'Motekita is designed to use less than 50MB of memory and less than 1% CPU. It\'s lightweight enough to run in the background without affecting your computer\'s performance.',
+  },
+  {
+    question: 'How can I get support?',
+    answer: 'You can create an Issue on our GitHub repository or contact us through the contact page.',
+  },
+];
+---
+
+<BaseLayout
+  title="FAQ - Motekita"
+  description="Frequently asked questions about Motekita"
+>
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h1 class="text-3xl sm:text-4xl font-bold">Frequently Asked Questions</h1>
+        <p class="mt-4 text-lg text-muted-foreground">
+          Common questions about Motekita
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        {faqs.map((faq) => (
+          <details class="group bg-background rounded-lg border p-6">
+            <summary class="flex cursor-pointer items-center justify-between font-medium list-none">
+              <span>{faq.question}</span>
+              <span class="ml-4 shrink-0 transition-transform group-open:rotate-180">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <p class="mt-4 text-muted-foreground">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

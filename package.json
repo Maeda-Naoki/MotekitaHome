@@ -1,0 +1,24 @@
+{
+  "name": "motekita-landing",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "lint": "biome check ./src",
+    "lint:fix": "biome check ./src --write",
+    "format": "biome format ./src --write"
+  },
+  "dependencies": {
+    "astro": "^5.2.0",
+    "@astrojs/sitemap": "^3.2.0",
+    "@astrojs/check": "^0.9.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.11",
+    "@tailwindcss/vite": "^4.1.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.8.0"
+  }
+}
