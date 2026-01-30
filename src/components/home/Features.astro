@@ -1,27 +1,28 @@
 ---
 import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+import { Shield, Zap, Monitor, CircleDollarSign } from 'lucide-static';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const features = [
   {
-    icon: '🔒',
+    icon: Shield,
     title: t('features.privacy.title'),
     description: t('features.privacy.desc'),
   },
   {
-    icon: '⚡',
+    icon: Zap,
     title: t('features.lightweight.title'),
     description: t('features.lightweight.desc'),
   },
   {
-    icon: '💻',
+    icon: Monitor,
     title: t('features.crossplatform.title'),
     description: t('features.crossplatform.desc'),
   },
   {
-    icon: '💰',
+    icon: CircleDollarSign,
     title: t('features.free.title'),
     description: t('features.free.desc'),
   },
@@ -38,7 +39,7 @@ const features = [
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
       {features.map((feature) => (
         <div class="bg-background rounded-lg p-6 shadow-sm border hover:shadow-md transition-shadow">
-          <div class="text-4xl mb-4">{feature.icon}</div>
+          <div class="w-10 h-10 mb-4 text-primary [&>svg]:w-full [&>svg]:h-full" set:html={feature.icon} />
           <h3 class="text-xl font-semibold mb-2">{feature.title}</h3>
           <p class="text-muted-foreground">{feature.description}</p>
         </div>

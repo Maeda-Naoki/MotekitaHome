@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Check, Circle } from 'lucide-static';
 ---
 
 <BaseLayout
@@ -28,23 +29,23 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
           <h3 class="text-xl font-semibold mt-4 mb-3">初回リリース</h3>
           <ul class="space-y-2 text-muted-foreground">
             <li class="flex items-start gap-2">
-              <span class="text-green-500 mt-1">✓</span>
+              <span class="text-green-500 mt-1 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" set:html={Check} />
               <span>Gmail IMAP接続による新着メール検知</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-green-500 mt-1">✓</span>
+              <span class="text-green-500 mt-1 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" set:html={Check} />
               <span>ゴールデンレトリバーのアニメーション通知</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-green-500 mt-1">✓</span>
+              <span class="text-green-500 mt-1 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" set:html={Check} />
               <span>システムトレイ常駐</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-green-500 mt-1">✓</span>
+              <span class="text-green-500 mt-1 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" set:html={Check} />
               <span>Windows / macOS / Linux対応</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-green-500 mt-1">✓</span>
+              <span class="text-green-500 mt-1 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" set:html={Check} />
               <span>完全ローカル処理によるプライバシー保護</span>
             </li>
           </ul>
@@ -61,19 +62,19 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
           <h3 class="text-xl font-semibold mt-4 mb-3">今後の予定</h3>
           <ul class="space-y-2 text-muted-foreground">
             <li class="flex items-start gap-2">
-              <span class="text-muted-foreground mt-1">○</span>
+              <span class="text-muted-foreground mt-1 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" set:html={Circle} />
               <span>スパム判定機能（プレミアム）</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-muted-foreground mt-1">○</span>
+              <span class="text-muted-foreground mt-1 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" set:html={Circle} />
               <span>Outlook対応（プレミアム）</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-muted-foreground mt-1">○</span>
+              <span class="text-muted-foreground mt-1 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" set:html={Circle} />
               <span>追加犬種DLC</span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-muted-foreground mt-1">○</span>
+              <span class="text-muted-foreground mt-1 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" set:html={Circle} />
               <span>衣装システムDLC</span>
             </li>
           </ul>
