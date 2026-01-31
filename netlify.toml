@@ -2,6 +2,22 @@
   command = "pnpm build"
   publish = "dist"
 
+# ブラウザの言語設定に基づいた自動リダイレクト
+[[redirects]]
+  from = "/"
+  to = "/ja/"
+  status = 302
+  force = false
+  conditions = {Language = ["ja"]}
+
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = false
+  conditions = {Language = ["en"]}
+
+# フォールバック: その他の言語はデフォルト（日本語）へ
 [[redirects]]
   from = "/"
   to = "/ja/"
