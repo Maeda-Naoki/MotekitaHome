@@ -12,7 +12,7 @@ const t = useTranslations(lang);
       <p class="mt-4 text-lg text-muted-foreground">{t('pricing.subtitle')}</p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
       <!-- Free Plan -->
       <div class="bg-background rounded-lg p-8 shadow-sm border">
         <h3 class="text-2xl font-bold">{t('pricing.free')}</h3>
@@ -85,34 +85,6 @@ const t = useTranslations(lang);
         >
           {t('hero.cta')}
         </a>
-      </div>
-
-      <!-- DLC -->
-      <div class="bg-background rounded-lg p-8 shadow-sm border">
-        <h3 class="text-2xl font-bold">{t('pricing.dlc.title')}</h3>
-        <p class="mt-4 text-muted-foreground">
-          {lang === 'ja' ? 'お好みでカスタマイズ' : 'Customize to your liking'}
-        </p>
-        <div class="mt-8 space-y-6">
-          <div>
-            <div class="flex items-center justify-between">
-              <span class="font-medium">{t('pricing.dlc.dogs')}</span>
-              <span class="text-muted-foreground">{t('pricing.dlc.dogs.price')}</span>
-            </div>
-            <p class="text-sm text-muted-foreground mt-1">
-              {lang === 'ja' ? '柴犬、ハスキーなど' : 'Shiba Inu, Husky, etc.'}
-            </p>
-          </div>
-          <div>
-            <div class="flex items-center justify-between">
-              <span class="font-medium">{t('pricing.dlc.costumes')}</span>
-              <span class="text-muted-foreground">{t('pricing.dlc.costumes.price')}</span>
-            </div>
-            <p class="text-sm text-muted-foreground mt-1">
-              {lang === 'ja' ? '季節限定、コスプレなど' : 'Seasonal, Cosplay, etc.'}
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
