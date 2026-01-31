@@ -20,11 +20,11 @@ const footerLinks = [
   <div class="container mx-auto px-4 py-12">
     <div class="flex flex-col md:flex-row justify-between items-center gap-8">
       <div class="flex items-center gap-2">
-        <span class="w-6 h-6 [&>svg]:w-full [&>svg]:h-full" set:html={PawPrint} />
+        <span class="w-6 h-6 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={PawPrint} />
         <span class="text-xl font-bold">Motekita</span>
       </div>
 
-      <nav class="flex flex-wrap justify-center gap-6">
+      <nav class="flex flex-wrap justify-center gap-6" aria-label={lang === 'ja' ? 'フッターナビゲーション' : 'Footer navigation'}>
         {footerLinks.map((link) => (
           <a
             href={link.href}
@@ -43,7 +43,7 @@ const footerLinks = [
           class="text-muted-foreground hover:text-foreground transition-colors"
           aria-label="GitHub"
         >
-          <span class="w-5 h-5 [&>svg]:w-full [&>svg]:h-full" set:html={GithubIcon} />
+          <span class="w-5 h-5 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={GithubIcon} />
         </a>
       </div>
     </div>

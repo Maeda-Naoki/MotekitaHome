@@ -5,10 +5,10 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section id="pricing" class="py-20 sm:py-32">
+<section id="pricing" class="py-20 sm:py-32" aria-labelledby="pricing-heading">
   <div class="container mx-auto px-4">
     <div class="text-center mb-16">
-      <h2 class="text-3xl sm:text-4xl font-bold">{t('pricing.title')}</h2>
+      <h2 id="pricing-heading" class="text-3xl sm:text-4xl font-bold">{t('pricing.title')}</h2>
       <p class="mt-4 text-lg text-muted-foreground">{t('pricing.subtitle')}</p>
     </div>
 
@@ -22,19 +22,19 @@ const t = useTranslations(lang);
         <p class="mt-4 text-muted-foreground">{t('pricing.free.desc')}</p>
         <ul class="mt-8 space-y-4">
           <li class="flex items-center gap-3">
-            <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
             </svg>
             <span>{t('pricing.free.feature1')}</span>
           </li>
           <li class="flex items-center gap-3">
-            <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
             </svg>
             <span>{t('pricing.free.feature2')}</span>
           </li>
           <li class="flex items-center gap-3">
-            <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
             </svg>
             <span>{t('pricing.free.feature3')}</span>
@@ -61,19 +61,19 @@ const t = useTranslations(lang);
         <p class="mt-4 opacity-90">{t('pricing.premium.desc')}</p>
         <ul class="mt-8 space-y-4">
           <li class="flex items-center gap-3">
-            <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
             </svg>
             <span>{t('pricing.premium.feature1')}</span>
           </li>
           <li class="flex items-center gap-3">
-            <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
             </svg>
             <span>{t('pricing.premium.feature2')}</span>
           </li>
           <li class="flex items-center gap-3">
-            <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
             </svg>
             <span>{t('pricing.premium.feature3')}</span>
