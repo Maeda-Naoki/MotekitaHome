@@ -4,6 +4,12 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://motekita.luckyretriever.org',
+  redirects: {
+    '/': {
+      status: 302,
+      destination: '/ja/'
+    }
+  },
   i18n: {
     defaultLocale: 'ja',
     locales: ['ja', 'en'],
