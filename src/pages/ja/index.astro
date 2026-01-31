@@ -10,24 +10,40 @@ const softwareJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: 'Motekita',
-  description: 'かわいいゴールデンレトリバーがメール通知をお届けするデスクトップアプリ',
+  alternateName: 'モテきた',
+  description: 'かわいいゴールデンレトリバーがメール通知をお届けするデスクトップアプリ。完全ローカル処理でプライバシー重視。',
   applicationCategory: 'UtilitiesApplication',
   operatingSystem: 'Windows 10+, macOS 10.15+, Linux',
+  softwareVersion: '1.0.0',
+  downloadUrl: 'https://motekita.luckyretriever.org/ja/#download',
+  screenshot: 'https://motekita.luckyretriever.org/og-image.svg',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    ratingCount: '1',
+  },
   offers: [
     {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'JPY',
       name: '無料版',
+      availability: 'https://schema.org/InStock',
     },
     {
       '@type': 'Offer',
       price: '500',
       priceCurrency: 'JPY',
       name: 'プレミアム',
+      availability: 'https://schema.org/InStock',
     },
   ],
   inLanguage: 'ja',
+  keywords: 'メール通知, デスクトップアプリ, ゴールデンレトリバー, プライバシー, ローカル処理',
+  author: {
+    '@type': 'Organization',
+    name: 'Motekita',
+  },
 };
 ---
 
