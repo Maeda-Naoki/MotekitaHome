@@ -32,8 +32,6 @@ export const ui = {
     'features.lightweight.desc': 'メモリ使用量50MB未満、CPU使用率1%未満を目標に設計されています。',
     'features.crossplatform.title': 'クロスプラットフォーム',
     'features.crossplatform.desc': 'Windows、macOS、Linuxに対応。どの環境でも同じ体験を。',
-    'features.free.title': 'ランニングコスト$0',
-    'features.free.desc': '外部サーバー不要の省エネ設計。一度購入すれば追加費用なし。',
 
     // Pricing
     'pricing.title': '料金プラン',
@@ -51,11 +49,6 @@ export const ui = {
     'pricing.premium.feature1': '無料版のすべての機能',
     'pricing.premium.feature2': 'スパム判定機能',
     'pricing.premium.feature3': 'Outlook対応',
-    'pricing.dlc.title': 'DLC',
-    'pricing.dlc.dogs': '追加犬種',
-    'pricing.dlc.dogs.price': '¥200〜300',
-    'pricing.dlc.costumes': '衣装',
-    'pricing.dlc.costumes.price': '¥100〜200',
 
     // System Requirements
     'requirements.title': 'システム要件',
@@ -73,7 +66,6 @@ export const ui = {
     'download.windows': 'Windows版',
     'download.macos': 'macOS版',
     'download.linux': 'Linux版',
-    'download.github': 'GitHubで見る',
 
     // Footer
     'footer.terms': '利用規約',
@@ -90,7 +82,6 @@ export const ui = {
     'contact.title': 'お問い合わせ',
     'contact.desc': 'ご質問やフィードバックがありましたら、お気軽にお問い合わせください。',
     'contact.email': 'メールでのお問い合わせ',
-    'contact.github': 'GitHubでIssueを作成',
 
     // Legal pages
     'terms.title': '利用規約',
@@ -122,8 +113,6 @@ export const ui = {
     'features.lightweight.desc': 'Designed for under 50MB memory usage and under 1% CPU utilization.',
     'features.crossplatform.title': 'Cross-Platform',
     'features.crossplatform.desc': 'Available on Windows, macOS, and Linux. Same experience everywhere.',
-    'features.free.title': '$0 Running Cost',
-    'features.free.desc': 'No external server needed. Once purchased, no additional fees.',
 
     // Pricing
     'pricing.title': 'Pricing',
@@ -141,11 +130,6 @@ export const ui = {
     'pricing.premium.feature1': 'All free features',
     'pricing.premium.feature2': 'Spam detection',
     'pricing.premium.feature3': 'Outlook support',
-    'pricing.dlc.title': 'DLC',
-    'pricing.dlc.dogs': 'Additional Dogs',
-    'pricing.dlc.dogs.price': '$2-3',
-    'pricing.dlc.costumes': 'Costumes',
-    'pricing.dlc.costumes.price': '$1-2',
 
     // System Requirements
     'requirements.title': 'System Requirements',
@@ -163,7 +147,6 @@ export const ui = {
     'download.windows': 'Windows',
     'download.macos': 'macOS',
     'download.linux': 'Linux',
-    'download.github': 'View on GitHub',
 
     // Footer
     'footer.terms': 'Terms of Service',
@@ -180,7 +163,6 @@ export const ui = {
     'contact.title': 'Contact',
     'contact.desc': 'If you have any questions or feedback, please feel free to contact us.',
     'contact.email': 'Contact via Email',
-    'contact.github': 'Create an Issue on GitHub',
 
     // Legal pages
     'terms.title': 'Terms of Service',
