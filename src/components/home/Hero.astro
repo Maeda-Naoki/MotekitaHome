@@ -35,18 +35,18 @@ const t = useTranslations(lang);
         <div class="relative w-72 h-72 sm:w-96 sm:h-96">
           <!-- Dog Animation Placeholder -->
           <div class="absolute inset-0 rounded-full bg-gradient-to-br from-amber-100 to-amber-200 dark:from-amber-900/20 dark:to-amber-800/20 flex items-center justify-center">
-            <span class="text-8xl sm:text-9xl animate-bounce" style="animation-duration: 2s;">🐕</span>
+            <span class="text-8xl sm:text-9xl animate-bounce" style="animation-duration: 2s;" role="img" aria-label={lang === 'ja' ? '犬' : 'Dog'}>🐕</span>
           </div>
           <!-- Decorative elements -->
-          <div class="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full animate-ping" style="animation-duration: 3s;"></div>
-          <div class="absolute -bottom-2 -left-2 w-6 h-6 bg-amber-400/30 rounded-full animate-ping" style="animation-duration: 2.5s;"></div>
+          <div class="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full animate-ping" style="animation-duration: 3s;" aria-hidden="true"></div>
+          <div class="absolute -bottom-2 -left-2 w-6 h-6 bg-amber-400/30 rounded-full animate-ping" style="animation-duration: 2.5s;" aria-hidden="true"></div>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Background decoration -->
-  <div class="absolute inset-0 -z-10 overflow-hidden">
+  <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
     <div class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-amber-100/50 to-orange-100/50 dark:from-amber-900/10 dark:to-orange-900/10 rounded-full blur-3xl"></div>
   </div>
 </section>

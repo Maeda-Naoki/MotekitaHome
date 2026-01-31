@@ -29,17 +29,17 @@ const features = [
 ];
 ---
 
-<section id="features" class="py-20 sm:py-32 bg-muted/50">
+<section id="features" class="py-20 sm:py-32 bg-muted/50" aria-labelledby="features-heading">
   <div class="container mx-auto px-4">
     <div class="text-center mb-16">
-      <h2 class="text-3xl sm:text-4xl font-bold">{t('features.title')}</h2>
+      <h2 id="features-heading" class="text-3xl sm:text-4xl font-bold">{t('features.title')}</h2>
       <p class="mt-4 text-lg text-muted-foreground">{t('features.subtitle')}</p>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
       {features.map((feature) => (
         <div class="bg-background rounded-lg p-6 shadow-sm border hover:shadow-md transition-shadow">
-          <div class="w-10 h-10 mb-4 text-primary [&>svg]:w-full [&>svg]:h-full" set:html={feature.icon} />
+          <div class="w-10 h-10 mb-4 text-primary [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={feature.icon} />
           <h3 class="text-xl font-semibold mb-2">{feature.title}</h3>
           <p class="text-muted-foreground">{feature.description}</p>
         </div>

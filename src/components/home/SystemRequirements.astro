@@ -5,10 +5,10 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="py-20 sm:py-32 bg-muted/50">
+<section class="py-20 sm:py-32 bg-muted/50" aria-labelledby="requirements-heading">
   <div class="container mx-auto px-4">
     <div class="text-center mb-16">
-      <h2 class="text-3xl sm:text-4xl font-bold">{t('requirements.title')}</h2>
+      <h2 id="requirements-heading" class="text-3xl sm:text-4xl font-bold">{t('requirements.title')}</h2>
     </div>
 
     <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -18,7 +18,7 @@ const t = useTranslations(lang);
         <ul class="space-y-4">
           <li class="flex items-center gap-4">
             <div class="w-12 h-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0">
-              <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
               </svg>
             </div>
@@ -29,7 +29,7 @@ const t = useTranslations(lang);
           </li>
           <li class="flex items-center gap-4">
             <div class="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center shrink-0">
-              <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
               </svg>
             </div>
@@ -40,7 +40,7 @@ const t = useTranslations(lang);
           </li>
           <li class="flex items-center gap-4">
             <div class="w-12 h-12 rounded-lg bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center shrink-0">
-              <svg class="w-6 h-6 text-orange-600 dark:text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-6 h-6 text-orange-600 dark:text-orange-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12.504 0c-.155 0-.311.001-.465.003-.653.014-1.302.074-1.944.18-1.288.212-2.522.638-3.655 1.262-.11.06-.22.122-.328.187-.11.065-.218.133-.325.202-.213.14-.423.286-.628.441-.205.155-.406.316-.602.484-.196.168-.388.343-.574.524-.186.181-.367.369-.542.562-.176.193-.346.392-.509.597-.164.205-.321.416-.471.632-.15.216-.293.438-.429.664-.136.226-.264.457-.385.693-.121.235-.234.476-.339.72-.105.245-.202.494-.291.747-.089.253-.17.51-.243.77-.073.26-.138.524-.194.79-.056.267-.104.538-.143.811-.039.273-.069.549-.091.828-.022.278-.035.56-.039.842-.004.283.001.567.014.852.013.285.035.57.065.855.03.285.068.57.115.854.047.284.102.567.165.849.063.282.134.563.212.842.079.279.165.556.259.832.094.275.195.548.304.818.109.27.225.537.348.801.123.264.253.525.39.782.137.257.281.51.432.758.151.249.309.493.473.732.164.24.335.474.512.703.177.229.36.452.549.67.189.217.384.429.585.634.201.205.407.404.619.596.212.192.429.378.651.556.222.178.449.35.68.514.231.164.467.321.707.47.24.15.484.291.732.425.248.134.5.26.755.377.256.118.515.227.778.328.263.1.529.193.798.276.269.084.541.159.815.225.275.066.553.123.832.171.28.048.562.087.846.117.284.03.57.05.857.062.287.012.575.014.863.008.288-.006.577-.022.865-.047.288-.025.576-.059.862-.102.287-.043.572-.095.856-.155.284-.061.566-.13.845-.208.28-.078.557-.165.831-.259.274-.095.546-.197.814-.307.268-.11.533-.229.794-.354.261-.125.519-.258.772-.398.253-.14.503-.288.748-.442.245-.154.486-.316.722-.484.236-.168.468-.343.694-.524.226-.18.448-.368.664-.561.216-.193.427-.393.632-.598.205-.206.404-.417.598-.634.194-.217.382-.44.563-.668.182-.228.357-.461.526-.699.169-.238.331-.482.486-.73.155-.248.303-.501.444-.759.14-.257.274-.519.399-.785.126-.266.244-.536.354-.81.111-.274.213-.552.308-.833.095-.281.181-.566.26-.854.078-.288.148-.579.21-.872.062-.293.115-.59.161-.888.045-.299.082-.6.11-.902.029-.303.049-.608.06-.914.012-.306.015-.614.01-.922-.006-.308-.021-.618-.044-.927-.024-.31-.056-.62-.097-.929-.041-.309-.09-.617-.147-.924-.057-.307-.122-.613-.195-.917-.073-.304-.153-.607-.241-.907-.088-.3-.184-.598-.287-.893-.103-.295-.214-.588-.332-.877-.118-.289-.244-.575-.377-.857-.133-.282-.273-.561-.42-.835-.148-.274-.302-.544-.464-.809-.162-.265-.331-.525-.506-.781-.175-.255-.357-.506-.545-.751-.188-.245-.383-.485-.584-.72-.201-.234-.408-.463-.621-.686-.213-.223-.432-.44-.657-.651-.224-.211-.454-.416-.69-.615-.235-.198-.476-.39-.722-.575-.246-.185-.497-.363-.754-.535-.256-.172-.517-.337-.783-.494-.266-.157-.536-.307-.811-.449-.275-.142-.555-.277-.838-.403-.284-.126-.571-.244-.862-.355-.291-.11-.586-.213-.883-.307-.297-.094-.598-.181-.901-.259-.303-.078-.609-.149-.917-.211-.308-.062-.619-.116-.931-.161-.312-.045-.626-.082-.941-.11-.316-.028-.633-.048-.951-.059-.318-.011-.637-.013-.956-.007z"/>
               </svg>
             </div>
@@ -58,7 +58,7 @@ const t = useTranslations(lang);
         <ul class="space-y-4">
           <li class="flex items-center gap-4">
             <div class="w-12 h-12 rounded-lg bg-green-100 dark:bg-green-900/30 flex items-center justify-center shrink-0">
-              <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
               </svg>
             </div>
@@ -71,7 +71,7 @@ const t = useTranslations(lang);
           </li>
           <li class="flex items-center gap-4">
             <div class="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center shrink-0">
-              <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
               </svg>
             </div>

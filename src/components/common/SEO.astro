@@ -4,14 +4,31 @@ interface Props {
   description: string;
   image?: string;
   type?: 'website' | 'article';
+  jsonLd?: Record<string, unknown>;
 }
 
-const { title, description, image = '/og-image.png', type = 'website' } = Astro.props;
+const { title, description, image = '/og-image.png', type = 'website', jsonLd } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const lang = Astro.currentLocale || 'ja';
 
 const jaUrl = new URL(Astro.url.pathname.replace(/^\/(ja|en)/, '/ja'), Astro.site);
 const enUrl = new URL(Astro.url.pathname.replace(/^\/(ja|en)/, '/en'), Astro.site);
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Motekita',
+  url: Astro.site?.toString(),
+  logo: new URL('/favicon.svg', Astro.site).toString(),
+};
+
+const webSiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Motekita',
+  url: Astro.site?.toString(),
+  inLanguage: lang === 'ja' ? 'ja-JP' : 'en-US',
+};
 ---
 
 <meta charset="UTF-8" />
@@ -19,6 +36,11 @@ const enUrl = new URL(Astro.url.pathname.replace(/^\/(ja|en)/, '/en'), Astro.sit
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalURL} />
+
+<!-- Additional SEO meta -->
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Motekita" />
+<meta name="generator" content={Astro.generator} />
 
 <!-- hreflang -->
 <link rel="alternate" hreflang="ja" href={jaUrl} />
@@ -32,6 +54,7 @@ const enUrl = new URL(Astro.url.pathname.replace(/^\/(ja|en)/, '/en'), Astro.sit
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.site)} />
 <meta property="og:locale" content={lang === 'ja' ? 'ja_JP' : 'en_US'} />
+<meta property="og:locale:alternate" content={lang === 'ja' ? 'en_US' : 'ja_JP'} />
 <meta property="og:site_name" content="Motekita" />
 
 <!-- Twitter Card -->
@@ -45,3 +68,11 @@ const enUrl = new URL(Astro.url.pathname.replace(/^\/(ja|en)/, '/en'), Astro.sit
 
 <!-- Theme Color -->
 <meta name="theme-color" content="#1e293b" />
+<meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(organizationJsonLd)} />
+<script type="application/ld+json" set:html={JSON.stringify(webSiteJsonLd)} />
+{jsonLd && (
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+)}

@@ -5,11 +5,36 @@ import Features from '@/components/home/Features.astro';
 import Pricing from '@/components/home/Pricing.astro';
 import SystemRequirements from '@/components/home/SystemRequirements.astro';
 import Download from '@/components/home/Download.astro';
+
+const softwareJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Motekita',
+  description: 'A desktop app where a cute Golden Retriever notifies you of new emails',
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Windows 10+, macOS 10.15+, Linux',
+  offers: [
+    {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      name: 'Free',
+    },
+    {
+      '@type': 'Offer',
+      price: '5',
+      priceCurrency: 'USD',
+      name: 'Premium',
+    },
+  ],
+  inLanguage: 'en',
+};
 ---
 
 <BaseLayout
   title="Motekita - Your Dog Tells You When Mail Arrives"
   description="A desktop app where a cute Golden Retriever notifies you of new emails. Available on Windows, macOS, and Linux. Complete local processing for privacy."
+  jsonLd={softwareJsonLd}
 >
   <Hero />
   <Features />

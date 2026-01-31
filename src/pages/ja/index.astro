@@ -5,11 +5,36 @@ import Features from '@/components/home/Features.astro';
 import Pricing from '@/components/home/Pricing.astro';
 import SystemRequirements from '@/components/home/SystemRequirements.astro';
 import Download from '@/components/home/Download.astro';
+
+const softwareJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Motekita',
+  description: 'かわいいゴールデンレトリバーがメール通知をお届けするデスクトップアプリ',
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Windows 10+, macOS 10.15+, Linux',
+  offers: [
+    {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'JPY',
+      name: '無料版',
+    },
+    {
+      '@type': 'Offer',
+      price: '500',
+      priceCurrency: 'JPY',
+      name: 'プレミアム',
+    },
+  ],
+  inLanguage: 'ja',
+};
 ---
 
 <BaseLayout
   title="Motekita - メールが届くと、犬が教えてくれる"
   description="かわいいゴールデンレトリバーがメール通知をお届けするデスクトップアプリ。Windows/macOS/Linux対応。完全ローカル処理でプライバシー重視。"
+  jsonLd={softwareJsonLd}
 >
   <Hero />
   <Features />
