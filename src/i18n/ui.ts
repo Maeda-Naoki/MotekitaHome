@@ -18,7 +18,7 @@ export const ui = {
     'nav.contact': 'お問い合わせ',
 
     // Hero
-    'hero.title': 'メールが届くと、犬が教えてくれる',
+    'hero.title': 'メールが届くと、ゴールデンレトリーバーが教えてくれる',
     'hero.subtitle': 'かわいいゴールデンレトリバーがメール通知をお届けするデスクトップアプリ',
     'hero.cta': '無料ダウンロード',
     'hero.cta.secondary': '機能を見る',
@@ -26,12 +26,12 @@ export const ui = {
     // Features
     'features.title': '主な機能',
     'features.subtitle': 'シンプルで使いやすい、それでいて楽しい',
-    'features.privacy.title': '完全ローカル処理',
-    'features.privacy.desc': 'メール本文は取得せず、件名と送信者のみ。プライバシーを重視した設計です。',
-    'features.lightweight.title': '軽量設計',
-    'features.lightweight.desc': 'メモリ使用量50MB未満、CPU使用率1%未満を目標に設計されています。',
-    'features.crossplatform.title': 'クロスプラットフォーム',
-    'features.crossplatform.desc': 'Windows、macOS、Linuxに対応。どの環境でも同じ体験を。',
+    'features.privacy.title': 'プライバシー保護',
+    'features.privacy.desc': 'メールの本文は一切見ません。誰から来たか、タイトルは何かだけを確認します。',
+    'features.lightweight.title': '軽くて快適',
+    'features.lightweight.desc': 'パソコンの動作に影響を与えず、普段通りに作業できます。',
+    'features.crossplatform.title': 'どのパソコンでも使える',
+    'features.crossplatform.desc': 'Windows、macOS、Linuxに対応。お使いの環境で同じように楽しめます。',
 
     // Pricing
     'pricing.title': '料金プラン',
@@ -40,7 +40,7 @@ export const ui = {
     'pricing.free.price': '¥0',
     'pricing.free.desc': '基本機能をすべて無料で',
     'pricing.free.feature1': 'Gmail メール通知',
-    'pricing.free.feature2': '犬のアニメーション',
+    'pricing.free.feature2': 'ゴールデンレトリーバーのアニメーション',
     'pricing.free.feature3': 'システムトレイ常駐',
     'pricing.premium': 'プレミアム',
     'pricing.premium.price': '¥500',
@@ -53,8 +53,8 @@ export const ui = {
     // System Requirements
     'requirements.title': 'システム要件',
     'requirements.os': '対応OS',
-    'requirements.windows': 'Windows 10以降',
-    'requirements.macos': 'macOS 10.15以降',
+    'requirements.windows': 'Windows 11以降',
+    'requirements.macos': 'macOS 14以降',
     'requirements.linux': 'Linux (GTK3対応)',
     'requirements.specs': '推奨スペック',
     'requirements.memory': 'メモリ: 4GB以上',
@@ -107,12 +107,12 @@ export const ui = {
     // Features
     'features.title': 'Key Features',
     'features.subtitle': 'Simple, easy to use, and fun',
-    'features.privacy.title': 'Complete Local Processing',
-    'features.privacy.desc': 'Only fetches subject and sender, never email content. Privacy-focused design.',
-    'features.lightweight.title': 'Lightweight Design',
-    'features.lightweight.desc': 'Designed for under 50MB memory usage and under 1% CPU utilization.',
-    'features.crossplatform.title': 'Cross-Platform',
-    'features.crossplatform.desc': 'Available on Windows, macOS, and Linux. Same experience everywhere.',
+    'features.privacy.title': 'Privacy Protected',
+    'features.privacy.desc': 'Never looks at email content. Only checks who sent it and what the subject is.',
+    'features.lightweight.title': 'Light and Smooth',
+    'features.lightweight.desc': 'Works without affecting your computer. You can work as usual.',
+    'features.crossplatform.title': 'Works on Any Computer',
+    'features.crossplatform.desc': 'Available on Windows, macOS, and Linux. Enjoy the same experience on your device.',
 
     // Pricing
     'pricing.title': 'Pricing',
@@ -134,8 +134,8 @@ export const ui = {
     // System Requirements
     'requirements.title': 'System Requirements',
     'requirements.os': 'Supported OS',
-    'requirements.windows': 'Windows 10 or later',
-    'requirements.macos': 'macOS 10.15 or later',
+    'requirements.windows': 'Windows 11 or later',
+    'requirements.macos': 'macOS 14 or later',
     'requirements.linux': 'Linux (GTK3 compatible)',
     'requirements.specs': 'Recommended Specs',
     'requirements.memory': 'Memory: 4GB or more',
