@@ -6,44 +6,46 @@ const t = useTranslations(lang);
 ---
 
 <section class="relative overflow-hidden py-20 sm:py-32">
-  <div class="container mx-auto px-4">
-    <div class="flex flex-col lg:flex-row items-center gap-12">
-      <div class="flex-1 text-center lg:text-left">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight" style="word-break: keep-all;">
+  <div class="container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+      <div class="flex-1 text-center lg:text-left max-w-2xl lg:max-w-none">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight" style="word-break: keep-all; overflow-wrap: break-word;">
           {lang === 'ja' ? (
             <>
-              メールが届くと、<br class="sm:hidden" />ゴールデンレトリーバーが<br class="sm:hidden" />教えてくれる
+              メールが届くと、<br class="hidden sm:inline" />
+              ゴールデンレトリーバーが<br class="sm:hidden" />
+              教えてくれる
             </>
           ) : t('hero.title')}
         </h1>
-        <p class="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0" style="word-break: keep-all;">
+        <p class="mt-6 text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0" style="word-break: keep-all;">
           {t('hero.subtitle')}
         </p>
-        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
           <a
             href="#download"
-            class="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-lg font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+            class="inline-flex items-center justify-center rounded-md bg-primary px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
           >
             {t('hero.cta')}
           </a>
           <a
             href="#features"
-            class="inline-flex items-center justify-center rounded-md border border-input bg-background px-8 py-3 text-lg font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
+            class="inline-flex items-center justify-center rounded-md border border-input bg-background px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
           >
             {t('hero.cta.secondary')}
           </a>
         </div>
       </div>
 
-      <div class="flex-1 flex justify-center">
-        <div class="relative w-72 h-72 sm:w-96 sm:h-96">
+      <div class="flex-1 flex justify-center lg:justify-end w-full max-w-md lg:max-w-lg">
+        <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
           <!-- Dog Animation Placeholder -->
-          <div class="absolute inset-0 rounded-full bg-gradient-to-br from-amber-100 to-amber-200 dark:from-amber-900/20 dark:to-amber-800/20 flex items-center justify-center">
-            <img src="/MailMotekita.svg" alt={lang === 'ja' ? 'ゴールデンレトリーバー' : 'Golden Retriever'} class="w-48 h-48 sm:w-64 sm:h-64 animate-bounce" style="animation-duration: 2s;" />
+          <div class="absolute inset-0 rounded-full bg-gradient-to-br from-amber-100 to-amber-200 dark:from-amber-900/20 dark:to-amber-800/20 flex items-center justify-center overflow-hidden">
+            <img src="/MailMotekita.svg" alt={lang === 'ja' ? 'ゴールデンレトリーバー' : 'Golden Retriever'} class="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 animate-bounce" style="animation-duration: 2s;" />
           </div>
           <!-- Decorative elements -->
-          <div class="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full animate-ping" style="animation-duration: 3s;" aria-hidden="true"></div>
-          <div class="absolute -bottom-2 -left-2 w-6 h-6 bg-amber-400/30 rounded-full animate-ping" style="animation-duration: 2.5s;" aria-hidden="true"></div>
+          <div class="absolute top-2 right-2 w-6 h-6 sm:w-8 sm:h-8 bg-primary/20 rounded-full animate-ping" style="animation-duration: 3s;" aria-hidden="true"></div>
+          <div class="absolute bottom-2 left-2 w-5 h-5 sm:w-6 sm:h-6 bg-amber-400/30 rounded-full animate-ping" style="animation-duration: 2.5s;" aria-hidden="true"></div>
         </div>
       </div>
     </div>
