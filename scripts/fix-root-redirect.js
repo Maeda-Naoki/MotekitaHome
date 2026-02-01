@@ -6,7 +6,7 @@ const accessibleRedirectHTML = `<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
-  <link rel="canonical" href="https://motekita.luckyretriever.org/ja/">
+  <link rel="canonical" href="https://motekita.netlify.app/ja/">
   <title>Redirecting to Japanese page...</title>
   <script>
     window.location.href = '/ja/';
