@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://motekita.luckyretriever.org',
+  site: 'https://motekita.netlify.app',
   redirects: {
     '/': {
       status: 302,
