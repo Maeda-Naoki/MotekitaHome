@@ -27,7 +27,7 @@ const organizationJsonLd = {
   '@type': 'Organization',
   name: 'Motekita',
   url: Astro.site?.toString(),
-  logo: new URL('/favicon.svg', Astro.site).toString(),
+  logo: new URL('/favicon.png', Astro.site).toString(),
 };
 
 const webSiteJsonLd = {
@@ -74,7 +74,7 @@ const webSiteJsonLd = {
 <meta name="twitter:image" content={new URL(image, Astro.site)} />
 
 <!-- Favicon -->
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/favicon.png" />
 
 <!-- Theme Color -->
 <meta name="theme-color" content="#1e293b" />
