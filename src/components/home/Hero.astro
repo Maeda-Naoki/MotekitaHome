@@ -9,10 +9,14 @@ const t = useTranslations(lang);
   <div class="container mx-auto px-4">
     <div class="flex flex-col lg:flex-row items-center gap-12">
       <div class="flex-1 text-center lg:text-left">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-          {t('hero.title')}
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight" style="word-break: keep-all;">
+          {lang === 'ja' ? (
+            <>
+              メールが届くと、<br class="sm:hidden" />ゴールデンレトリーバーが<br class="sm:hidden" />教えてくれる
+            </>
+          ) : t('hero.title')}
         </h1>
-        <p class="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
+        <p class="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0" style="word-break: keep-all;">
           {t('hero.subtitle')}
         </p>
         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
