@@ -16,8 +16,8 @@ const pages = [
   { path: 'dist/en/privacy/index.html', name: 'English Privacy' },
   { path: 'dist/ja/licenses/index.html', name: 'Japanese Licenses' },
   { path: 'dist/en/licenses/index.html', name: 'English Licenses' },
-  { path: 'dist/ja/changelog/index.html', name: 'Japanese Changelog' },
-  { path: 'dist/en/changelog/index.html', name: 'English Changelog' },
+  { path: 'dist/ja/roadmap/index.html', name: 'Japanese Roadmap' },
+  { path: 'dist/en/roadmap/index.html', name: 'English Roadmap' },
 ];
 
 async function checkAccessibility() {

@@ -14,8 +14,8 @@ const pages = [
   { path: '/en/privacy', name: 'English Privacy' },
   { path: '/ja/licenses', name: 'Japanese Licenses' },
   { path: '/en/licenses', name: 'English Licenses' },
-  { path: '/ja/changelog', name: 'Japanese Changelog' },
-  { path: '/en/changelog', name: 'English Changelog' },
+  { path: '/ja/roadmap', name: 'Japanese Roadmap' },
+  { path: '/en/roadmap', name: 'English Roadmap' },
 ];
 
 for (const page of pages) {
