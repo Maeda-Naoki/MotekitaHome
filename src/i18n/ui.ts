@@ -70,7 +70,6 @@ export const ui = {
     // Footer
     'footer.terms': '利用規約',
     'footer.privacy': 'プライバシーポリシー',
-    'footer.licenses': 'OSSライセンス',
     'footer.changelog': 'ロードマップ',
     'footer.contact': 'お問い合わせ',
     'footer.copyright': '© 2025 Motekita. All rights reserved.',
@@ -86,7 +85,6 @@ export const ui = {
     // Legal pages
     'terms.title': '利用規約',
     'privacy.title': 'プライバシーポリシー',
-    'licenses.title': 'OSSライセンス',
     'roadmap.title': 'ロードマップ',
   },
   en: {
@@ -151,7 +149,6 @@ export const ui = {
     // Footer
     'footer.terms': 'Terms of Service',
     'footer.privacy': 'Privacy Policy',
-    'footer.licenses': 'OSS Licenses',
     'footer.changelog': 'Roadmap',
     'footer.contact': 'Contact',
     'footer.copyright': '© 2025 Motekita. All rights reserved.',
@@ -167,7 +164,6 @@ export const ui = {
     // Legal pages
     'terms.title': 'Terms of Service',
     'privacy.title': 'Privacy Policy',
-    'licenses.title': 'OSS Licenses',
     'roadmap.title': 'Roadmap',
   },
 } as const;
