@@ -12,8 +12,6 @@ const pages = [
   { path: '/en/terms', name: 'English Terms' },
   { path: '/ja/privacy', name: 'Japanese Privacy' },
   { path: '/en/privacy', name: 'English Privacy' },
-  { path: '/ja/licenses', name: 'Japanese Licenses' },
-  { path: '/en/licenses', name: 'English Licenses' },
   { path: '/ja/roadmap', name: 'Japanese Roadmap' },
   { path: '/en/roadmap', name: 'English Roadmap' },
 ];
