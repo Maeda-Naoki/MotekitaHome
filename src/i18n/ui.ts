@@ -19,7 +19,8 @@ export const ui = {
 
     // Hero
     'hero.title': 'メールが届くと、ゴールデンレトリーバーが教えてくれる',
-    'hero.subtitle': 'かわいいゴールデンレトリバーがメール通知をお届けするデスクトップアプリ',
+    'hero.subtitle':
+      'かわいいゴールデンレトリバーがメール通知をお届けするデスクトップアプリ',
     'hero.cta': '無料ダウンロード',
     'hero.cta.secondary': '機能を見る',
 
@@ -27,11 +28,14 @@ export const ui = {
     'features.title': '主な機能',
     'features.subtitle': 'シンプルで使いやすい、それでいて楽しい',
     'features.privacy.title': 'プライバシー保護',
-    'features.privacy.desc': 'メールの本文は一切見ません。誰から来たか、タイトルは何かだけを確認します。',
+    'features.privacy.desc':
+      'メールの本文は一切見ません。誰から来たか、タイトルは何かだけを確認します。',
     'features.lightweight.title': '軽くて快適',
-    'features.lightweight.desc': 'パソコンの動作に影響を与えず、普段通りに作業できます。',
+    'features.lightweight.desc':
+      'パソコンの動作に影響を与えず、普段通りに作業できます。',
     'features.crossplatform.title': 'どのパソコンでも使える',
-    'features.crossplatform.desc': 'Windows、macOS、Linuxに対応。お使いの環境で同じように楽しめます。',
+    'features.crossplatform.desc':
+      'Windows、macOS、Linuxに対応。お使いの環境で同じように楽しめます。',
 
     // Pricing
     'pricing.title': '料金プラン',
@@ -79,7 +83,8 @@ export const ui = {
 
     // Contact
     'contact.title': 'お問い合わせ',
-    'contact.desc': 'ご質問やフィードバックがありましたら、お気軽にお問い合わせください。',
+    'contact.desc':
+      'ご質問やフィードバックがありましたら、お気軽にお問い合わせください。',
     'contact.email': 'メールでのお問い合わせ',
 
     // Legal pages
@@ -98,7 +103,8 @@ export const ui = {
 
     // Hero
     'hero.title': 'Your Dog Tells You When Mail Arrives',
-    'hero.subtitle': 'A desktop app where a cute Golden Retriever notifies you of new emails',
+    'hero.subtitle':
+      'A desktop app where a cute Golden Retriever notifies you of new emails',
     'hero.cta': 'Free Download',
     'hero.cta.secondary': 'See Features',
 
@@ -106,11 +112,14 @@ export const ui = {
     'features.title': 'Key Features',
     'features.subtitle': 'Simple, easy to use, and fun',
     'features.privacy.title': 'Privacy Protected',
-    'features.privacy.desc': 'Never looks at email content. Only checks who sent it and what the subject is.',
+    'features.privacy.desc':
+      'Never looks at email content. Only checks who sent it and what the subject is.',
     'features.lightweight.title': 'Light and Smooth',
-    'features.lightweight.desc': 'Works without affecting your computer. You can work as usual.',
+    'features.lightweight.desc':
+      'Works without affecting your computer. You can work as usual.',
     'features.crossplatform.title': 'Works on Any Computer',
-    'features.crossplatform.desc': 'Available on Windows, macOS, and Linux. Enjoy the same experience on your device.',
+    'features.crossplatform.desc':
+      'Available on Windows, macOS, and Linux. Enjoy the same experience on your device.',
 
     // Pricing
     'pricing.title': 'Pricing',
@@ -158,7 +167,8 @@ export const ui = {
 
     // Contact
     'contact.title': 'Contact',
-    'contact.desc': 'If you have any questions or feedback, please feel free to contact us.',
+    'contact.desc':
+      'If you have any questions or feedback, please feel free to contact us.',
     'contact.email': 'Contact via Email',
 
     // Legal pages

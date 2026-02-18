@@ -1,16 +1,17 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import Hero from '@/components/home/Hero.astro';
+import Download from '@/components/home/Download.astro';
 import Features from '@/components/home/Features.astro';
+import Hero from '@/components/home/Hero.astro';
 import Pricing from '@/components/home/Pricing.astro';
 import SystemRequirements from '@/components/home/SystemRequirements.astro';
-import Download from '@/components/home/Download.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const softwareJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: 'Motekita',
-  description: 'A desktop app where a cute Golden Retriever notifies you of new emails. Complete local processing for privacy.',
+  description:
+    'A desktop app where a cute Golden Retriever notifies you of new emails. Complete local processing for privacy.',
   applicationCategory: 'UtilitiesApplication',
   operatingSystem: 'Windows 11+, macOS 14+, Linux',
   softwareVersion: '1.0.0',
@@ -38,7 +39,8 @@ const softwareJsonLd = {
     },
   ],
   inLanguage: 'en',
-  keywords: 'email notification, desktop app, Golden Retriever, privacy, local processing',
+  keywords:
+    'email notification, desktop app, Golden Retriever, privacy, local processing',
   author: {
     '@type': 'Organization',
     name: 'Motekita',

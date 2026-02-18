@@ -1,5 +1,9 @@
 ---
-import { getLangFromUrl, getAlternateLang, getLanguageName } from '@/i18n/utils';
+import {
+  getAlternateLang,
+  getLangFromUrl,
+  getLanguageName,
+} from '@/i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const alternateLang = getAlternateLang(lang);

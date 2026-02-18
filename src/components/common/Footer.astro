@@ -1,6 +1,10 @@
 ---
-import { getLangFromUrl, useTranslations, getLocalizedPath } from '@/i18n/utils';
 import { PawPrint } from 'lucide-static';
+import {
+  getLangFromUrl,
+  getLocalizedPath,
+  useTranslations,
+} from '@/i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

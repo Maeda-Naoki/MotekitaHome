@@ -8,19 +8,33 @@ interface Props {
   keywords?: string;
 }
 
-const { title, description, image = '/og-image.svg', type = 'website', jsonLd, keywords } = Astro.props;
+const {
+  title,
+  description,
+  image = '/og-image.svg',
+  type = 'website',
+  jsonLd,
+  keywords,
+} = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const lang = Astro.currentLocale || 'ja';
 
 // デフォルトのキーワード
-const defaultKeywords = lang === 'ja'
-  ? 'Motekita,モテきた,モテキタ,もてきた,メール通知,デスクトップアプリ,メールアプリ,ゴールデンレトリバー,通知アプリ,プライバシー重視,ローカル処理,Windows,macOS,Linux'
-  : 'Motekita,email notification,desktop app,email app,Golden Retriever,notification app,privacy focused,local processing,Windows,macOS,Linux';
+const defaultKeywords =
+  lang === 'ja'
+    ? 'Motekita,モテきた,モテキタ,もてきた,メール通知,デスクトップアプリ,メールアプリ,ゴールデンレトリバー,通知アプリ,プライバシー重視,ローカル処理,Windows,macOS,Linux'
+    : 'Motekita,email notification,desktop app,email app,Golden Retriever,notification app,privacy focused,local processing,Windows,macOS,Linux';
 
 const finalKeywords = keywords || defaultKeywords;
 
-const jaUrl = new URL(Astro.url.pathname.replace(/^\/(ja|en)/, '/ja'), Astro.site);
-const enUrl = new URL(Astro.url.pathname.replace(/^\/(ja|en)/, '/en'), Astro.site);
+const jaUrl = new URL(
+  Astro.url.pathname.replace(/^\/(ja|en)/, '/ja'),
+  Astro.site,
+);
+const enUrl = new URL(
+  Astro.url.pathname.replace(/^\/(ja|en)/, '/en'),
+  Astro.site,
+);
 
 const organizationJsonLd = {
   '@context': 'https://schema.org',
