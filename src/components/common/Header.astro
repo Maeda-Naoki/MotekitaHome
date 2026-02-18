@@ -1,5 +1,9 @@
 ---
-import { getLangFromUrl, useTranslations, getLocalizedPath } from '@/i18n/utils';
+import {
+  getLangFromUrl,
+  getLocalizedPath,
+  useTranslations,
+} from '@/i18n/utils';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 
 const lang = getLangFromUrl(Astro.url);
