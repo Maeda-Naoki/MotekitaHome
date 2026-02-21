@@ -26,7 +26,7 @@ const t = useTranslations('ja');
             href="mailto:support@motekita.example.com"
             class="flex items-center gap-6 p-6 bg-background rounded-lg border hover:border-primary hover:shadow-md transition-all group"
           >
-            <div class="w-14 h-14 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+            <div class="w-14 h-14 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform" aria-hidden="true">
               <span class="w-7 h-7 text-blue-600 dark:text-blue-400 [&>svg]:w-full [&>svg]:h-full" set:html={Mail} />
             </div>
             <div>
@@ -35,7 +35,7 @@ const t = useTranslations('ja');
                 support@motekita.example.com
               </p>
             </div>
-            <span class="w-5 h-5 ml-auto text-muted-foreground group-hover:text-foreground transition-colors [&>svg]:w-full [&>svg]:h-full" set:html={ChevronRight} />
+            <span class="w-5 h-5 ml-auto text-muted-foreground group-hover:text-foreground transition-colors [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={ChevronRight} />
           </a>
         </div>
 
