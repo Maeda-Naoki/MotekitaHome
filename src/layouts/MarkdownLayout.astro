@@ -22,9 +22,9 @@ const { title, description } = Astro.props;
       {Astro.currentLocale === 'en' ? 'Skip to main content' : '本文へスキップ'}
     </a>
     <Header />
-    <main id="main-content" class="container mx-auto px-4 py-12">
-      <article class="prose prose-slate dark:prose-invert max-w-3xl mx-auto">
-        <h1 class="text-3xl font-bold mb-8">{title}</h1>
+    <main id="main-content" class="container mx-auto px-6 lg:px-8 py-20 sm:py-28">
+      <article class="prose max-w-3xl mx-auto">
+        <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight mb-12">{title}</h1>
         <slot />
       </article>
     </main>
@@ -48,40 +48,52 @@ const { title, description } = Astro.props;
   }
 
   .prose h2 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 1.25rem;
     font-size: 1.5rem;
     font-weight: 600;
+    letter-spacing: -0.01em;
   }
 
   .prose h3 {
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
     font-size: 1.25rem;
     font-weight: 600;
+    letter-spacing: -0.005em;
   }
 
   .prose p {
-    margin-bottom: 1rem;
-    line-height: 1.75;
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+    color: hsl(var(--muted-foreground));
   }
 
   .prose ul {
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     padding-left: 1.5rem;
     list-style-type: disc;
   }
 
   .prose li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.625rem;
+    line-height: 1.8;
+    color: hsl(var(--muted-foreground));
   }
 
   .prose a {
     color: hsl(var(--primary));
     text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   .prose a:hover {
-    opacity: 0.8;
+    opacity: 0.75;
+  }
+
+  .prose hr {
+    margin: 3rem 0;
+    border-color: hsl(var(--border));
+    opacity: 0.6;
   }
 </style>

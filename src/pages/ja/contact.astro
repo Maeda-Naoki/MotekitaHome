@@ -10,36 +10,36 @@ const t = useTranslations('ja');
   title="お問い合わせ - Motekita"
   description="Motekitaへのお問い合わせ"
 >
-  <section class="py-20">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16">
-        <h1 class="text-3xl sm:text-4xl font-bold">{t('contact.title')}</h1>
-        <p class="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+  <section class="py-32 sm:py-40">
+    <div class="container mx-auto px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">{t('contact.title')}</h1>
+        <p class="mt-5 text-lg sm:text-xl text-muted-foreground font-light max-w-2xl mx-auto">
           {t('contact.desc')}
         </p>
       </div>
 
       <div class="max-w-2xl mx-auto">
-        <div class="grid gap-6">
+        <div class="grid gap-4">
           <!-- Email -->
           <a
             href="mailto:support@motekita.example.com"
-            class="flex items-center gap-6 p-6 bg-background rounded-lg border hover:border-primary hover:shadow-md transition-all group"
+            class="flex items-center gap-6 p-8 bg-muted/40 rounded-2xl border border-border/60 hover:border-primary/40 hover:bg-background transition-all duration-300 group"
           >
-            <div class="w-14 h-14 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform" aria-hidden="true">
-              <span class="w-7 h-7 text-blue-600 dark:text-blue-400 [&>svg]:w-full [&>svg]:h-full" set:html={Mail} />
+            <div class="w-13 h-13 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300" aria-hidden="true">
+              <span class="w-6 h-6 text-blue-600 dark:text-blue-400 [&>svg]:w-full [&>svg]:h-full" set:html={Mail} />
             </div>
             <div>
-              <h2 class="text-lg font-semibold">{t('contact.email')}</h2>
-              <p class="text-muted-foreground mt-1">
+              <h2 class="text-[17px] font-semibold tracking-tight">{t('contact.email')}</h2>
+              <p class="text-[14px] text-muted-foreground mt-1">
                 support@motekita.example.com
               </p>
             </div>
-            <span class="w-5 h-5 ml-auto text-muted-foreground group-hover:text-foreground transition-colors [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={ChevronRight} />
+            <span class="w-5 h-5 ml-auto text-muted-foreground/50 group-hover:text-muted-foreground transition-colors duration-200 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={ChevronRight} />
           </a>
         </div>
 
-        <div class="mt-12 text-center text-muted-foreground">
+        <div class="mt-16 text-center text-[14px] text-muted-foreground">
           <p>
             お問い合わせには通常1〜3営業日以内に返信いたします。
           </p>

@@ -5,11 +5,11 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="relative overflow-hidden py-20 sm:py-32">
-  <div class="container mx-auto px-4 md:px-6 lg:px-8">
-    <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+<section class="relative overflow-hidden py-32 sm:py-44">
+  <div class="container mx-auto px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
       <div class="flex-1 text-center lg:text-left max-w-2xl lg:max-w-none">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.05]">
           {lang === 'ja' ? (
             <>
               メールが届くと、<br class="hidden sm:inline" />
@@ -18,19 +18,19 @@ const t = useTranslations(lang);
             </>
           ) : t('hero.title')}
         </h1>
-        <p class="mt-6 text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
+        <p class="mt-8 text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0 font-light">
           {t('hero.subtitle')}
         </p>
-        <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
           <a
             href="#download"
-            class="inline-flex items-center justify-center rounded-md bg-primary px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+            class="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3.5 text-[15px] font-semibold text-primary-foreground hover:bg-primary/90 transition-colors duration-200"
           >
             {t('hero.cta')}
           </a>
           <a
             href="#features"
-            class="inline-flex items-center justify-center rounded-md border border-input bg-background px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
+            class="inline-flex items-center justify-center rounded-full border border-border bg-background/80 px-8 py-3.5 text-[15px] font-semibold text-foreground hover:bg-muted transition-colors duration-200"
           >
             {t('hero.cta.secondary')}
           </a>
@@ -38,21 +38,19 @@ const t = useTranslations(lang);
       </div>
 
       <div class="flex-1 flex justify-center lg:justify-end w-full max-w-md lg:max-w-lg">
-        <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
-          <!-- Dog Animation Placeholder -->
-          <div class="absolute inset-0 rounded-full bg-gradient-to-br from-amber-100 to-amber-200 dark:from-amber-900/20 dark:to-amber-800/20 flex items-center justify-center overflow-hidden">
-            <img src="/MailMotekita.svg" alt={lang === 'ja' ? 'ゴールデンレトリーバー' : 'Golden Retriever'} class="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 animate-bounce [animation-duration:2s]" />
+        <div class="relative w-72 h-72 sm:w-88 sm:h-88 lg:w-[26rem] lg:h-[26rem]">
+          <div class="absolute inset-0 rounded-full bg-gradient-to-br from-amber-50 to-amber-100/60 dark:from-amber-900/15 dark:to-amber-800/10 flex items-center justify-center overflow-hidden">
+            <img src="/MailMotekita.svg" alt={lang === 'ja' ? 'ゴールデンレトリーバー' : 'Golden Retriever'} class="w-44 h-44 sm:w-56 sm:h-56 lg:w-72 lg:h-72 animate-bounce [animation-duration:2.5s]" />
           </div>
-          <!-- Decorative elements -->
-          <div class="absolute top-2 right-2 w-6 h-6 sm:w-8 sm:h-8 bg-primary/20 rounded-full animate-ping [animation-duration:3s]" aria-hidden="true"></div>
-          <div class="absolute bottom-2 left-2 w-5 h-5 sm:w-6 sm:h-6 bg-amber-400/30 rounded-full animate-ping [animation-duration:2.5s]" aria-hidden="true"></div>
+          <div class="absolute top-3 right-3 w-5 h-5 sm:w-6 sm:h-6 bg-primary/15 rounded-full animate-ping [animation-duration:3s]" aria-hidden="true"></div>
+          <div class="absolute bottom-3 left-3 w-4 h-4 sm:w-5 sm:h-5 bg-amber-400/20 rounded-full animate-ping [animation-duration:2.5s]" aria-hidden="true"></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Background decoration -->
+  <!-- Subtle background gradient — Apple style -->
   <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-    <div class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-amber-100/50 to-orange-100/50 dark:from-amber-900/10 dark:to-orange-900/10 rounded-full blur-3xl"></div>
+    <div class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/3 w-[900px] h-[700px] bg-gradient-to-b from-amber-50/60 to-transparent dark:from-amber-900/8 dark:to-transparent rounded-full blur-3xl"></div>
   </div>
 </section>

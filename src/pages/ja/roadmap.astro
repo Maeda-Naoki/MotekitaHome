@@ -7,67 +7,67 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
   title="ロードマップ - Motekita"
   description="Motekitaの開発ロードマップ"
 >
-  <section class="py-20">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16">
-        <h1 class="text-3xl sm:text-4xl font-bold">ロードマップ</h1>
-        <p class="mt-4 text-lg text-muted-foreground">
+  <section class="py-32 sm:py-40">
+    <div class="container mx-auto px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">ロードマップ</h1>
+        <p class="mt-5 text-lg sm:text-xl text-muted-foreground font-light">
           Motekitaの開発ロードマップ
         </p>
       </div>
 
       <div class="max-w-3xl mx-auto">
         <!-- Coming Soon -->
-        <div class="relative pl-8 pb-12 border-l-2 border-muted border-dashed last:pb-0">
-          <div class="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] rounded-full bg-muted border-2 border-muted-foreground"></div>
-          <div class="mb-2">
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-muted text-muted-foreground">
+        <div class="relative pl-10 pb-16 border-l border-border/60 border-dashed last:pb-0">
+          <div class="absolute left-0 top-0.5 w-3 h-3 -translate-x-[7px] rounded-full bg-background border-2 border-muted-foreground/40"></div>
+          <div class="mb-3">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-[12px] font-semibold bg-muted text-muted-foreground tracking-wide uppercase">
               Coming Soon
             </span>
           </div>
-          <h2 class="text-xl font-semibold mt-4 mb-3">今後の予定</h2>
-          <ul class="space-y-2 text-muted-foreground">
-            <li class="flex items-start gap-2">
-              <span class="text-muted-foreground mt-1 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={Circle} />
-              <span>スパム判定機能（プレミアム）</span>
+          <h2 class="text-[19px] font-semibold tracking-tight mt-5 mb-4">今後の予定</h2>
+          <ul class="space-y-3 text-muted-foreground">
+            <li class="flex items-start gap-3">
+              <span class="text-muted-foreground/50 mt-0.5 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={Circle} />
+              <span class="text-[15px]">スパム判定機能（プレミアム）</span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="text-muted-foreground mt-1 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={Circle} />
-              <span>Outlook対応（プレミアム）</span>
+            <li class="flex items-start gap-3">
+              <span class="text-muted-foreground/50 mt-0.5 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={Circle} />
+              <span class="text-[15px]">Outlook対応（プレミアム）</span>
             </li>
           </ul>
         </div>
 
         <!-- Version 1.0.0 -->
-        <div class="relative pl-8 pb-12 border-l-2 border-muted last:pb-0">
-          <div class="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] rounded-full bg-primary"></div>
-          <div class="mb-2">
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary text-primary-foreground">
+        <div class="relative pl-10 pb-16 border-l border-border/60 last:pb-0">
+          <div class="absolute left-0 top-0.5 w-3 h-3 -translate-x-[7px] rounded-full bg-primary"></div>
+          <div class="mb-3">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-[12px] font-semibold bg-primary text-primary-foreground tracking-wide uppercase">
               v1.0.0
             </span>
-            <span class="ml-3 text-sm text-muted-foreground">2025年1月</span>
+            <span class="ml-3 text-[13px] text-muted-foreground">2025年1月</span>
           </div>
-          <h2 class="text-xl font-semibold mt-4 mb-3">初回リリース</h2>
-          <ul class="space-y-2 text-muted-foreground">
-            <li class="flex items-start gap-2">
-              <span class="text-green-500 mt-1 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={Check} />
-              <span>Gmail IMAP接続による新着メール検知</span>
+          <h2 class="text-[19px] font-semibold tracking-tight mt-5 mb-4">初回リリース</h2>
+          <ul class="space-y-3 text-muted-foreground">
+            <li class="flex items-start gap-3">
+              <span class="text-primary mt-0.5 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={Check} />
+              <span class="text-[15px]">Gmail IMAP接続による新着メール検知</span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="text-green-500 mt-1 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={Check} />
-              <span>ゴールデンレトリバーのアニメーション通知</span>
+            <li class="flex items-start gap-3">
+              <span class="text-primary mt-0.5 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={Check} />
+              <span class="text-[15px]">ゴールデンレトリバーのアニメーション通知</span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="text-green-500 mt-1 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={Check} />
-              <span>システムトレイ常駐</span>
+            <li class="flex items-start gap-3">
+              <span class="text-primary mt-0.5 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={Check} />
+              <span class="text-[15px]">システムトレイ常駐</span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="text-green-500 mt-1 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={Check} />
-              <span>Windows / macOS / Linux対応</span>
+            <li class="flex items-start gap-3">
+              <span class="text-primary mt-0.5 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={Check} />
+              <span class="text-[15px]">Windows / macOS / Linux対応</span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="text-green-500 mt-1 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={Check} />
-              <span>完全ローカル処理によるプライバシー保護</span>
+            <li class="flex items-start gap-3">
+              <span class="text-primary mt-0.5 w-4 h-4 shrink-0 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={Check} />
+              <span class="text-[15px]">完全ローカル処理によるプライバシー保護</span>
             </li>
           </ul>
         </div>

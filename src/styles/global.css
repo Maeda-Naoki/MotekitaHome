@@ -24,56 +24,64 @@
   --radius-sm: calc(var(--radius) - 4px);
 }
 
+/* Apple Human Interface Guidelines — Color System */
 :root {
+  /* Pure white background — Apple.com */
   --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
+  /* Near-black text — Apple's #1D1D1F */
+  --foreground: 240 3% 12%;
   --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
+  --card-foreground: 240 3% 12%;
   --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
-  /* 46.9% → 44%: コントラスト比 ~4.4:1 → ~4.9:1 (WCAG 1.4.3 AA 対応) */
-  --muted-foreground: 215.4 16.3% 44%;
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 222.2 84% 4.9%;
-  --radius: 0.5rem;
+  --popover-foreground: 240 3% 12%;
+  /* Apple Blue — #0071E3 */
+  --primary: 211 100% 44%;
+  --primary-foreground: 0 0% 100%;
+  /* Apple's light gray — #F5F5F7 */
+  --secondary: 240 5% 96%;
+  --secondary-foreground: 240 3% 12%;
+  --muted: 240 5% 96%;
+  /* Apple's medium gray — #6E6E73 */
+  --muted-foreground: 240 2% 44%;
+  --accent: 240 5% 96%;
+  --accent-foreground: 240 3% 12%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  /* Apple's subtle separator — #D2D2D7 */
+  --border: 240 5% 84%;
+  --input: 240 5% 84%;
+  --ring: 211 100% 44%;
+  /* Larger border radius — Apple HIG 14px */
+  --radius: 0.875rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    /* Apple dark — #000000 / #1C1C1E */
+    --background: 240 6% 10%;
+    --foreground: 0 0% 96%;
+    --card: 240 5% 13%;
+    --card-foreground: 0 0% 96%;
+    --popover: 240 5% 13%;
+    --popover-foreground: 0 0% 96%;
+    /* Apple Blue stays bright in dark */
+    --primary: 211 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4% 18%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 240 4% 18%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 240 4% 18%;
+    --accent-foreground: 0 0% 96%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 4% 22%;
+    --input: 240 4% 22%;
+    --ring: 211 100% 50%;
   }
 }
 
-/* WCAG 2.4.11: スティッキーヘッダー(4rem=64px)分のスクロール余白
-   アンカーリンク先や、キーボードフォーカス要素がヘッダーに隠れるのを防ぐ */
+/* WCAG 2.4.11: スティッキーヘッダー分のスクロール余白 */
 html {
   scroll-padding-top: 5rem;
 }
@@ -106,7 +114,7 @@ html {
   outline-offset: 2px;
 }
 
-/* WCAG 2.3.3 (best practice): 動きに敏感なユーザーのためにアニメーションを無効化 */
+/* WCAG 2.3.3: 動きに敏感なユーザーのためにアニメーションを無効化 */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -124,6 +132,18 @@ html {
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
+  /* Apple SF Pro font stack */
   font-family:
-    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "SF Pro Text",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  /* Apple HIG: smooth anti-aliasing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern" 1;
+  text-rendering: optimizeLegibility;
 }
