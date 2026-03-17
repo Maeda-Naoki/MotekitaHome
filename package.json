@@ -16,9 +16,9 @@
     "test:a11y": "node scripts/check-a11y.js"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.0",
-    "@astrojs/sitemap": "^3.2.0",
-    "astro": "^5.17.2",
+    "@astrojs/check": "^0.9.8",
+    "@astrojs/sitemap": "^3.7.1",
+    "astro": "^6.0.5",
     "lucide-static": "0.574.0"
   },
   "devDependencies": {

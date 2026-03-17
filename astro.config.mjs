@@ -18,7 +18,6 @@ export default defineConfig({
     },
   },
   vite: {
-    // @ts-expect-error Vite version mismatch between root and landing
     plugins: [tailwindcss()],
   },
   integrations: [
