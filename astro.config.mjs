@@ -4,6 +4,12 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://motekita.netlify.app',
+  prefetch: {
+    prefetchAll: true,
+  },
+  build: {
+    inlineStylesheets: 'auto',
+  },
   redirects: {
     '/': {
       status: 302,
@@ -18,7 +24,6 @@ export default defineConfig({
     },
   },
   vite: {
-    // @ts-expect-error Vite version mismatch between root and landing
     plugins: [tailwindcss()],
   },
   integrations: [
