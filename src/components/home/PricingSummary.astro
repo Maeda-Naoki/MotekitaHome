@@ -1,0 +1,108 @@
+---
+import { getLangFromUrl, getLocalizedPath, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const pricingUrl = getLocalizedPath('/pricing', lang);
+
+const plans = [
+  {
+    id: 'free',
+    name: t('pricing.free'),
+    price: t('pricing.free.price'),
+    period: null,
+    description: t('pricing.free.desc'),
+    features: [
+      t('pricing.free.feature1'),
+      t('pricing.free.feature2'),
+      t('pricing.free.feature3'),
+    ],
+    recommended: false,
+  },
+  {
+    id: 'premium',
+    name: t('pricing.premium'),
+    price: t('pricing.premium.price'),
+    period: t('pricing.premium.once'),
+    description: t('pricing.premium.desc'),
+    features: [
+      t('pricing.premium.feature1'),
+      t('pricing.premium.feature2'),
+      t('pricing.premium.feature3'),
+    ],
+    recommended: true,
+  },
+];
+
+const srYes = lang === 'ja' ? '○' : 'Yes';
+---
+
+<section class="py-16 md:py-24 px-4 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <div class="md:flex md:items-end md:justify-between mb-12 gap-4">
+      <div class="slide-in-left">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-warm-gray-900 mb-3">
+          {t('pricingSummary.title')}
+        </h2>
+        <div class="w-12 h-1 bg-primary-400 rounded-full mb-4 md:mb-0"></div>
+      </div>
+      <p class="text-lg text-warm-gray-600 md:max-w-sm slide-in-right">{t('pricingSummary.subtitle')}</p>
+    </div>
+
+    <!-- おすすめプランを上にオフセットして目立たせる -->
+    <div class="grid md:grid-cols-2 gap-5 mb-10 items-start max-w-2xl mx-auto">
+      {plans.map((plan, index) => (
+        <div
+          class:list={[
+            "rounded-card transition-all scale-in",
+            plan.recommended
+              ? "bg-primary-50 border-2 border-primary-700 shadow-lifted p-8 md:-mt-4 md:mb-4"
+              : "bg-cream-50 border border-warm-gray-100 shadow-soft hover:shadow-card p-7"
+          ]}
+          style={`transition-delay: ${index * 120}ms`}
+        >
+          {plan.recommended && (
+            <div class="inline-block px-3 py-1 bg-primary-700 text-white text-xs font-bold tracking-wide uppercase rounded-soft mb-4">
+              {lang === 'ja' ? 'おすすめ' : 'Recommended'}
+            </div>
+          )}
+          <h3 class="text-xl font-bold text-warm-gray-900 mb-4">
+            {plan.name}
+          </h3>
+          <div class="mb-5 flex items-baseline gap-1">
+            <span class:list={[
+              "font-bold text-warm-gray-900",
+              plan.recommended ? "text-4xl" : "text-3xl"
+            ]}>
+              {plan.price}
+            </span>
+            {plan.period && (
+              <span class="text-warm-gray-500 text-sm">{plan.period}</span>
+            )}
+          </div>
+          <ul class="space-y-2.5">
+            {plan.features.map((feature) => (
+              <li class="flex items-start gap-2 text-sm text-warm-gray-700">
+                <span class="sr-only">{srYes}</span>
+                <svg class="w-4 h-4 text-secondary-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="fade-in-up">
+      <a
+        href={pricingUrl}
+        class="inline-flex items-center gap-1.5 text-primary-700 hover:text-primary-800 font-bold transition-colors group"
+      >
+        {t('pricingSummary.cta')}
+        <span class="inline-block transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>

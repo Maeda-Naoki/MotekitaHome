@@ -1,9 +1,10 @@
 ---
-import Download from '@/components/home/Download.astro';
-import Features from '@/components/home/Features.astro';
+import FeatureHighlights from '@/components/home/FeatureHighlights.astro';
+import FinalCTA from '@/components/home/FinalCTA.astro';
 import Hero from '@/components/home/Hero.astro';
-import Pricing from '@/components/home/Pricing.astro';
-import SystemRequirements from '@/components/home/SystemRequirements.astro';
+import HowItWorks from '@/components/home/HowItWorks.astro';
+import PricingSummary from '@/components/home/PricingSummary.astro';
+import ValueProposition from '@/components/home/ValueProposition.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const softwareJsonLd = {
@@ -17,11 +18,6 @@ const softwareJsonLd = {
   softwareVersion: '1.0.0',
   downloadUrl: 'https://motekita.netlify.app/en/#download',
   screenshot: 'https://motekita.netlify.app/og-image.svg',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    ratingCount: '1',
-  },
   offers: [
     {
       '@type': 'Offer',
@@ -39,8 +35,6 @@ const softwareJsonLd = {
     },
   ],
   inLanguage: 'en',
-  keywords:
-    'email notification, desktop app, Golden Retriever, privacy, local processing',
   author: {
     '@type': 'Organization',
     name: 'Motekita',
@@ -55,8 +49,9 @@ const softwareJsonLd = {
 >
   <link rel="preload" as="image" href="/MailMotekita.svg" slot="head" />
   <Hero />
-  <Features />
-  <Pricing />
-  <SystemRequirements />
-  <Download />
+  <ValueProposition />
+  <HowItWorks />
+  <FeatureHighlights />
+  <PricingSummary />
+  <FinalCTA />
 </BaseLayout>

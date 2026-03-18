@@ -1,0 +1,66 @@
+---
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const items = [
+  {
+    icon: '🔒',
+    title: t('features.privacy.title'),
+    description: t('features.privacy.desc'),
+  },
+  {
+    icon: '⚡',
+    title: t('features.lightweight.title'),
+    description: t('features.lightweight.desc'),
+  },
+  {
+    icon: '💻',
+    title: t('features.crossplatform.title'),
+    description: t('features.crossplatform.desc'),
+  },
+];
+---
+
+<section class="py-16 md:py-24 px-4 bg-white wave-divider">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-display font-bold text-warm-gray-900 md:text-left text-center mb-4 fade-in-up">
+      {t('valueProposition.title')}
+    </h2>
+    <div class="w-16 h-1 bg-primary-400 rounded-full mb-12 md:mx-0 mx-auto fade-in-up"></div>
+
+    <!-- 非対称グリッド: 1つ目を大きく、2-3を小さくスタック -->
+    <div class="grid md:grid-cols-[1.2fr_1fr] gap-6 md:gap-8">
+      <!-- 最初のカードを大きく -->
+      <div
+        class="p-8 bg-cream-50 rounded-card border border-warm-gray-100 hover:shadow-card transition-all slide-in-left"
+        style="transition-delay: 0ms"
+      >
+        <div class="mb-5 w-14 h-14 bg-primary-100 rounded-soft flex items-center justify-center text-3xl">
+          {items[0].icon}
+        </div>
+        <h3 class="text-2xl font-bold text-warm-gray-900 mb-3">{items[0].title}</h3>
+        <p class="text-warm-gray-600 text-lg leading-relaxed">{items[0].description}</p>
+      </div>
+
+      <!-- 残り2つをスタック -->
+      <div class="flex flex-col gap-6">
+        {items.slice(1).map((item, index) => (
+          <div
+            class="p-6 bg-cream-50 rounded-card border border-warm-gray-100 hover:shadow-card transition-all flex items-start gap-5 slide-in-right"
+            style={`transition-delay: ${(index + 1) * 120}ms`}
+          >
+            <div class="w-12 h-12 bg-primary-100 rounded-soft flex items-center justify-center flex-shrink-0 text-2xl">
+              {item.icon}
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-warm-gray-900 mb-2">{item.title}</h3>
+              <p class="text-warm-gray-600">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
