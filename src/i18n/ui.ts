@@ -43,9 +43,6 @@ export const ui = {
     'features.spamdetection.title': 'スパム判定',
     'features.spamdetection.desc':
       '不要なメールを自動で判定し、大事な通知だけをお知らせします。（プレミアム）',
-    'features.outlook.title': 'Outlook対応',
-    'features.outlook.desc':
-      'GmailだけでなくOutlookアカウントにも対応しています。（プレミアム）',
     'features.animation.title': 'かわいいアニメーション',
     'features.animation.desc':
       'メールが届くたびに、ゴールデンレトリーバーがかわいく反応します。',
@@ -88,8 +85,6 @@ export const ui = {
     'pricing.premium.desc': '高度な機能をアンロック',
     'pricing.premium.feature1': '無料版のすべての機能',
     'pricing.premium.feature2': 'スパム判定機能',
-    'pricing.premium.feature3': 'Outlook対応',
-
     // System Requirements
     'requirements.title': 'システム要件',
     'requirements.os': '対応OS',
@@ -180,9 +175,6 @@ export const ui = {
     'features.spamdetection.title': 'Spam Detection',
     'features.spamdetection.desc':
       'Automatically filters unwanted emails so only important ones notify you. (Premium)',
-    'features.outlook.title': 'Outlook Support',
-    'features.outlook.desc':
-      'Works with not just Gmail but also Outlook accounts. (Premium)',
     'features.animation.title': 'Cute Animations',
     'features.animation.desc':
       'Every time an email arrives, the Golden Retriever reacts in the cutest way.',
@@ -225,8 +217,6 @@ export const ui = {
     'pricing.premium.desc': 'Unlock advanced features',
     'pricing.premium.feature1': 'All free features',
     'pricing.premium.feature2': 'Spam detection',
-    'pricing.premium.feature3': 'Outlook support',
-
     // System Requirements
     'requirements.title': 'System Requirements',
     'requirements.os': 'Supported OS',
