@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://motekita.netlify.app',
   prefetch: {
-    prefetchAll: true,
+    defaultStrategy: 'hover',
   },
   build: {
     inlineStylesheets: 'auto',
