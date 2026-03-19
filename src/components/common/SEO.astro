@@ -41,7 +41,7 @@ const organizationJsonLd = {
   '@type': 'Organization',
   name: 'Motekita',
   url: Astro.site?.toString(),
-  logo: new URL('/favicon.png', Astro.site).toString(),
+  logo: new URL('/favicon.svg', Astro.site).toString(),
 };
 
 const webSiteJsonLd = {
@@ -93,8 +93,7 @@ const webSiteJsonLd = {
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png" />
 
 <!-- Theme Color -->
-<meta name="theme-color" content="#1e293b" />
-<meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#fffbf5" />
 
 <!-- JSON-LD Structured Data -->
 <script is:inline type="application/ld+json" set:html={JSON.stringify(organizationJsonLd)} />

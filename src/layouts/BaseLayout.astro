@@ -20,6 +20,9 @@ const { title, description, image, jsonLd } = Astro.props;
     <SEO title={title} description={description} image={image} jsonLd={jsonLd} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- dns-prefetch: preconnect非対応ブラウザ向けフォールバック -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <!-- LCP フォント (Rounded Mplus 1c) を優先ロード: display=optional で初回レンダリングをブロックしない -->
     <link
       rel="preload"
