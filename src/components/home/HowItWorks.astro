@@ -1,0 +1,60 @@
+---
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const steps = [
+  {
+    number: '1',
+    title: t('howItWorks.step1.title'),
+    description: t('howItWorks.step1.desc'),
+  },
+  {
+    number: '2',
+    title: t('howItWorks.step2.title'),
+    description: t('howItWorks.step2.desc'),
+  },
+  {
+    number: '3',
+    title: t('howItWorks.step3.title'),
+    description: t('howItWorks.step3.desc'),
+  },
+];
+---
+
+<section class="py-16 md:py-24 px-4 relative">
+  <!-- 装飾: 控えめなドットパターン -->
+  <div class="absolute inset-0 dot-pattern opacity-30 pointer-events-none" aria-hidden="true"></div>
+
+  <div class="max-w-5xl mx-auto relative z-10">
+    <h2 class="text-3xl md:text-4xl font-display font-bold text-warm-gray-900 text-center mb-16 fade-in-up">
+      {t('howItWorks.title')}
+    </h2>
+
+    <!-- タイムライン -->
+    <div class="relative">
+      <!-- 接続線 (desktop) -->
+      <div class="hidden md:block absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-200 via-primary-300 to-primary-200" aria-hidden="true"></div>
+
+      <div class="grid md:grid-cols-3 gap-12 md:gap-8">
+        {steps.map((step, index) => (
+          <div
+            class={`relative scale-in ${index === 1 ? 'md:pt-8' : ''}`}
+            style={`transition-delay: ${index * 180}ms`}
+          >
+            <div class="flex flex-col items-center text-center">
+              <div class="relative z-10 w-16 h-16 rounded-full bg-primary-700 text-white flex items-center justify-center text-2xl font-bold mb-6 shadow-card">
+                {step.number}
+              </div>
+              <div class={`bg-white rounded-card p-6 shadow-soft border border-warm-gray-100 w-full ${index === 1 ? 'md:-mt-2' : ''}`}>
+                <h3 class="text-xl font-bold text-warm-gray-900 mb-3">{step.title}</h3>
+                <p class="text-warm-gray-600 leading-relaxed">{step.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

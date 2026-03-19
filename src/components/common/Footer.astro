@@ -1,5 +1,4 @@
 ---
-import { PawPrint } from 'lucide-static';
 import {
   getLangFromUrl,
   getLocalizedPath,
@@ -8,37 +7,49 @@ import {
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-const footerLinks = [
-  { href: getLocalizedPath('/terms', lang), label: t('footer.terms') },
-  { href: getLocalizedPath('/privacy', lang), label: t('footer.privacy') },
-  { href: getLocalizedPath('/roadmap', lang), label: t('footer.changelog') },
-  { href: getLocalizedPath('/contact', lang), label: t('footer.contact') },
-];
 ---
 
-<footer class="border-t bg-muted/50">
-  <div class="container mx-auto px-4 py-12">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-      <div class="flex items-center gap-2">
-        <span class="w-6 h-6 [&>svg]:w-full [&>svg]:h-full" aria-hidden="true" set:html={PawPrint} />
-        <span class="text-xl font-bold">Motekita</span>
+<footer class="bg-warm-gray-100 border-t border-warm-gray-200 mt-auto">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <!-- Logo + Copyright -->
+      <div>
+        <div class="flex items-center gap-2.5 font-display font-bold text-lg text-warm-gray-900 mb-2">
+          <span class="w-7 h-7 bg-primary-700 rounded-soft flex items-center justify-center" aria-hidden="true">
+            <span class="text-white text-xs font-bold">M</span>
+          </span>
+          Motekita
+        </div>
+        <p class="text-sm text-warm-gray-600">{t('footer.copyright')}</p>
       </div>
 
-      <nav class="flex flex-wrap justify-center gap-6" aria-label={lang === 'ja' ? 'フッターナビゲーション' : 'Footer navigation'}>
-        {footerLinks.map((link) => (
-          <a
-            href={link.href}
-            class="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            {link.label}
-          </a>
-        ))}
+      <!-- Footer Navigation -->
+      <nav class="flex flex-wrap items-center gap-6 text-sm" aria-label={lang === 'ja' ? 'フッターナビゲーション' : 'Footer navigation'}>
+        <a
+          href={getLocalizedPath('/privacy', lang)}
+          class="text-warm-gray-600 hover:text-primary-700 transition-colors"
+        >
+          {t('footer.privacy')}
+        </a>
+        <a
+          href={getLocalizedPath('/terms', lang)}
+          class="text-warm-gray-600 hover:text-primary-700 transition-colors"
+        >
+          {t('footer.terms')}
+        </a>
+        <a
+          href={getLocalizedPath('/roadmap', lang)}
+          class="text-warm-gray-600 hover:text-primary-700 transition-colors"
+        >
+          {t('footer.changelog')}
+        </a>
+        <a
+          href={getLocalizedPath('/contact', lang)}
+          class="text-warm-gray-600 hover:text-primary-700 transition-colors"
+        >
+          {t('footer.contact')}
+        </a>
       </nav>
-    </div>
-
-    <div class="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-      {t('footer.copyright')}
     </div>
   </div>
 </footer>

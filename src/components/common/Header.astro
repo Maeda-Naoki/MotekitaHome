@@ -1,4 +1,5 @@
 ---
+import { mainNav } from '@/data/navigation';
 import {
   getLangFromUrl,
   getLocalizedPath,
@@ -8,41 +9,98 @@ import LanguageSwitcher from './LanguageSwitcher.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const homeUrl = getLocalizedPath('/', lang);
 
-const navItems = [
-  { href: getLocalizedPath('/', lang) + '#features', label: t('nav.features') },
-  { href: getLocalizedPath('/', lang) + '#pricing', label: t('nav.pricing') },
-  { href: getLocalizedPath('/', lang) + '#download', label: t('nav.download') },
-  { href: getLocalizedPath('/faq', lang), label: t('nav.faq') },
-];
+const navItems = mainNav.map((item) => ({
+  ...item,
+  href: getLocalizedPath(item.href, lang),
+  label: t(item.labelKey as Parameters<typeof t>[0]),
+}));
 ---
 
-<header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-  <div class="container mx-auto flex h-16 items-center justify-between px-4">
-    <a href={getLocalizedPath('/', lang)} class="flex items-center gap-2">
-      <img src="/favicon.png" alt="" class="w-8 h-8" />
-      <span class="text-xl font-bold">Motekita</span>
-    </a>
+<header class="sticky top-0 z-40 bg-cream-50/95 backdrop-blur-sm border-b border-warm-gray-100">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href={homeUrl} class="flex items-center gap-2.5 font-display font-bold text-xl text-warm-gray-900 hover:text-primary-700 transition-colors">
+        <span class="w-8 h-8 bg-primary-700 rounded-soft flex items-center justify-center" aria-hidden="true">
+          <span class="text-white text-sm font-bold">M</span>
+        </span>
+        Motekita
+      </a>
 
-    <nav class="hidden md:flex items-center gap-6" aria-label={lang === 'ja' ? 'メインナビゲーション' : 'Main navigation'}>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-6" aria-label={lang === 'ja' ? 'メインナビゲーション' : 'Main navigation'}>
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class="text-warm-gray-700 hover:text-primary-700 font-medium transition-colors"
+          >
+            {item.label}
+          </a>
+        ))}
+        <LanguageSwitcher />
+        <a
+          href={getLocalizedPath('/', lang) + '#download'}
+          class="inline-block bg-primary-700 hover:bg-primary-800 text-white font-bold py-2 px-6 rounded-button shadow-soft hover:shadow-hover transition-all duration-300"
+        >
+          {t('nav.download')}
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-button"
+        class="md:hidden p-2 text-warm-gray-700 hover:text-primary-700 transition-colors"
+        aria-label={lang === 'ja' ? 'メニューを開く' : 'Open menu'}
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-warm-gray-100">
+    <nav class="px-4 py-4 space-y-3" aria-label={lang === 'ja' ? 'モバイルナビゲーション' : 'Mobile navigation'}>
       {navItems.map((item) => (
         <a
           href={item.href}
-          class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          class="block py-2 text-warm-gray-700 hover:text-primary-700 font-medium transition-colors"
         >
           {item.label}
         </a>
       ))}
-    </nav>
-
-    <div class="flex items-center gap-4">
-      <LanguageSwitcher />
+      <div class="py-2">
+        <LanguageSwitcher />
+      </div>
       <a
         href={getLocalizedPath('/', lang) + '#download'}
-        class="hidden sm:inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+        class="block text-center bg-primary-700 hover:bg-primary-800 text-white font-bold py-3 px-6 rounded-button shadow-soft hover:shadow-hover transition-all duration-300"
       >
         {t('nav.download')}
       </a>
-    </div>
+    </nav>
   </div>
 </header>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      mobileMenuButton.setAttribute('aria-expanded', String(!isExpanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>

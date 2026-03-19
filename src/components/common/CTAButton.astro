@@ -1,0 +1,19 @@
+---
+interface Props {
+  text: string;
+  href?: string;
+  size?: 'default' | 'lg';
+}
+
+const { text, href = '#download', size = 'default' } = Astro.props;
+const sizeClasses = size === 'lg'
+  ? 'py-3.5 px-10 text-lg'
+  : 'py-2.5 px-8 text-base';
+---
+
+<a
+  href={href}
+  class={`inline-block bg-primary-700 hover:bg-primary-800 text-white font-bold rounded-button shadow-soft hover:shadow-hover transition-all duration-300 ${sizeClasses}`}
+>
+  {text}
+</a>

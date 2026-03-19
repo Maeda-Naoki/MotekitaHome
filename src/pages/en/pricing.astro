@@ -1,0 +1,128 @@
+---
+import CTAButton from '@/components/common/CTAButton.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { useTranslations } from '@/i18n/utils';
+
+const t = useTranslations('en');
+
+const plans = [
+  {
+    name: t('pricing.free'),
+    price: t('pricing.free.price'),
+    period: null,
+    description: t('pricing.free.desc'),
+    features: [
+      t('pricing.free.feature1'),
+      t('pricing.free.feature2'),
+      t('pricing.free.feature3'),
+    ],
+    recommended: false,
+  },
+  {
+    name: t('pricing.premium'),
+    price: t('pricing.premium.price'),
+    period: t('pricing.premium.once'),
+    description: t('pricing.premium.desc'),
+    features: [
+      t('pricing.premium.feature1'),
+      t('pricing.premium.feature2'),
+    ],
+    recommended: true,
+  },
+];
+
+const faqs = [
+  { q: t('pricing.page.faq.q1'), a: t('pricing.page.faq.a1') },
+  { q: t('pricing.page.faq.q2'), a: t('pricing.page.faq.a2') },
+];
+---
+
+<BaseLayout
+  title="Pricing - Motekita"
+  description="Motekita pricing plans. Core features are completely free. Premium is a one-time purchase."
+>
+  <div class="max-w-5xl mx-auto px-4 py-16 md:py-24">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-warm-gray-500 mb-8" aria-label="Breadcrumb">
+      <a href="/en/" class="hover:text-primary-700 transition-colors">Home</a>
+      <span class="mx-2" aria-hidden="true">›</span>
+      <span class="text-warm-gray-900">{t('pricing.page.title')}</span>
+    </nav>
+
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-display font-bold text-warm-gray-900 mb-4 fade-in-up">
+        {t('pricing.page.title')}
+      </h1>
+      <p class="text-lg text-warm-gray-600 max-w-xl mx-auto fade-in-up">
+        {t('pricing.page.subtitle')}
+      </p>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-20">
+      {plans.map((plan, index) => (
+        <div
+          class:list={[
+            "rounded-card transition-all scale-in",
+            plan.recommended
+              ? "bg-primary-50 border-2 border-primary-700 shadow-lifted p-8 md:-mt-4 md:mb-4"
+              : "bg-cream-50 border border-warm-gray-100 shadow-soft hover:shadow-card p-7"
+          ]}
+          style={`transition-delay: ${index * 120}ms`}
+        >
+          {plan.recommended && (
+            <div class="inline-block px-3 py-1 bg-primary-700 text-white text-xs font-bold tracking-wide uppercase rounded-soft mb-4">
+              Recommended
+            </div>
+          )}
+          <h2 class="text-2xl font-bold text-warm-gray-900 mb-4">{plan.name}</h2>
+          <div class="mb-5 flex items-baseline gap-1">
+            <span class:list={[
+              "font-bold text-warm-gray-900",
+              plan.recommended ? "text-5xl" : "text-4xl"
+            ]}>
+              {plan.price}
+            </span>
+            {plan.period && (
+              <span class="text-warm-gray-500 text-sm">{plan.period}</span>
+            )}
+          </div>
+          <p class="text-warm-gray-600 text-sm mb-6">{plan.description}</p>
+          <ul class="space-y-3 mb-8">
+            {plan.features.map((feature) => (
+              <li class="flex items-start gap-2 text-sm text-warm-gray-700">
+                <span class="sr-only">Yes</span>
+                <svg class="w-4 h-4 text-secondary-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+          <CTAButton text={t('pricing.page.cta')} href="/en/#download" />
+        </div>
+      ))}
+    </div>
+
+    <!-- FAQ -->
+    <section>
+      <h2 class="text-2xl font-display font-bold text-warm-gray-900 mb-8 text-center fade-in-up">
+        {t('pricing.page.faq.title')}
+      </h2>
+      <div class="max-w-2xl mx-auto space-y-4">
+        {faqs.map((faq, index) => (
+          <details
+            class="bg-white rounded-card border border-warm-gray-100 p-6 scale-in"
+            style={`transition-delay: ${index * 80}ms`}
+          >
+            <summary class="font-bold text-warm-gray-900 cursor-pointer hover:text-primary-700 transition-colors list-none flex justify-between items-center gap-4">
+              {faq.q}
+              <span class="text-warm-gray-400 flex-shrink-0" aria-hidden="true">+</span>
+            </summary>
+            <p class="mt-4 text-warm-gray-600 leading-relaxed">{faq.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
