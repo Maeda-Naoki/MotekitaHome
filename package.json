@@ -2,7 +2,7 @@
   "name": "motekita-landing",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.28.2",
+  "packageManager": "pnpm@10.33.0",
   "engines": {
     "pnpm": ">=10.0.0"
   },
