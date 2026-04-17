@@ -23,7 +23,7 @@ importers:
     devDependencies:
       '@axe-core/cli':
         specifier: ^4.11.1
-        version: 4.11.1
+        version: 4.11.2
       '@axe-core/playwright':
         specifier: ^4.11.1
         version: 4.11.1(playwright-core@1.59.1)
@@ -112,8 +112,8 @@ packages:
   '@astrojs/yaml2ts@0.2.3':
     resolution: {integrity: sha512-PJzRmgQzUxI2uwpdX2lXSHtP4G8ocp24/t+bZyf5Fy0SZLSF9f9KXZoMlFM/XCGue+B0nH/2IZ7FpBYQATBsCg==}
 
-  '@axe-core/cli@4.11.1':
-    resolution: {integrity: sha512-xC7doMReoy7QnQ18azdpIZHoYL1HcG5c5wvEcCpm5kWny520RGTRrBcnAZENaQ9nTQAkE7fXZFK4Z1cfBDTBFg==}
+  '@axe-core/cli@4.11.2':
+    resolution: {integrity: sha512-KTPKM0xqkdgrOrLM1BbxLHvcuPC7L8LCZR9IJK73CBe2hYWmMfrNqNW7kO0s680sHpF1Z/1yaebCfS+cuy4IpA==}
     engines: {node: '>=8'}
     hasBin: true
 
@@ -122,8 +122,8 @@ packages:
     peerDependencies:
       playwright-core: '>= 1.0.0'
 
-  '@axe-core/webdriverjs@4.11.1':
-    resolution: {integrity: sha512-UVq7uBsqaQlHj7PQPg+WhE0nV6ccYtE0cnGglStS5RE3RAB+gQcb30R1k3usI+Q/xyROSJHhusOus4BzqrlZ1w==}
+  '@axe-core/webdriverjs@4.11.2':
+    resolution: {integrity: sha512-ixw2oNvwP6MRcyJOnn9/kry+d3LW/4QYgerAK/a9KV9YzdTtIfzRWlwLn9NQAEa0jcxcCVj8l01tVZrjqSVp6A==}
     peerDependencies:
       selenium-webdriver: '>3.0.0-beta  || >=2.53.1 || >4.0.0-alpha'
 
@@ -1060,8 +1060,8 @@ packages:
     resolution: {integrity: sha512-TQMmc3w+5AxjpL8iIiwebF73dRDF4fBIieAqGn9RGCWaEVwQ6Fb2cGe31Yns0RRIzii5goJ1Y7xbMwo1TxMplw==}
     engines: {node: '>= 20.19.0'}
 
-  chromedriver@147.0.3:
-    resolution: {integrity: sha512-OF+WpbIXXqD9g0BxDkJo3vpBgeaAWy8VpWDkt9yM466lVFnhzIgjmj1SvFYMENwesaD2iFABiY5surVz6rj3qA==}
+  chromedriver@147.0.4:
+    resolution: {integrity: sha512-eRNbfkoTvAsSfFODM4QVhs3cXB/B4/nFHeI6+ycuKan5e3bJrq8njuLTBHHOLbL0dggxEpMHLiczJUQa+Gw3JA==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -1227,8 +1227,8 @@ packages:
   domutils@3.2.2:
     resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
 
-  dotenv@17.4.1:
-    resolution: {integrity: sha512-k8DaKGP6r1G30Lx8V4+pCsLzKr8vLmV2paqEj1Y55GdAgJuIqpRp5FfajGF8KtwMxCz9qJc6wUIJnm053d/WCw==}
+  dotenv@17.4.2:
+    resolution: {integrity: sha512-nI4U3TottKAcAD9LLud4Cb7b2QztQMUEfHbvhTH09bqXTxnSie8WnjPALV/WMCrJZ6UV/qHJ6L03OqO3LcdYZw==}
     engines: {node: '>=12'}
 
   dset@3.1.4:
@@ -2071,8 +2071,8 @@ packages:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
     engines: {node: '>=v12.22.7'}
 
-  selenium-webdriver@4.39.0:
-    resolution: {integrity: sha512-NAs9jCU+UeZ/ZmRb8R6zOp7N8eMklefdBYASnaRmCNXdgFE8w3OCxxZmLixkwqnGDHY5VF7hCulfw1Mls43N/A==}
+  selenium-webdriver@4.41.0:
+    resolution: {integrity: sha512-1XxuKVhr9az24xwixPBEDGSZP+P0z3ZOnCmr9Oiep0MlJN2Mk+flIjD3iBS9BgyjS4g14dikMqnrYUPIjhQBhA==}
     engines: {node: '>= 20.0.0'}
 
   semver@7.7.4:
@@ -2700,15 +2700,15 @@ snapshots:
     dependencies:
       yaml: 2.8.3
 
-  '@axe-core/cli@4.11.1':
+  '@axe-core/cli@4.11.2':
     dependencies:
-      '@axe-core/webdriverjs': 4.11.1(selenium-webdriver@4.39.0)
+      '@axe-core/webdriverjs': 4.11.2(selenium-webdriver@4.41.0)
       axe-core: 4.11.3
-      chromedriver: 147.0.3
+      chromedriver: 147.0.4
       colors: 1.4.0
       commander: 9.5.0
-      dotenv: 17.4.1
-      selenium-webdriver: 4.39.0
+      dotenv: 17.4.2
+      selenium-webdriver: 4.41.0
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2720,10 +2720,10 @@ snapshots:
       axe-core: 4.11.3
       playwright-core: 1.59.1
 
-  '@axe-core/webdriverjs@4.11.1(selenium-webdriver@4.39.0)':
+  '@axe-core/webdriverjs@4.11.2(selenium-webdriver@4.41.0)':
     dependencies:
       axe-core: 4.11.3
-      selenium-webdriver: 4.39.0
+      selenium-webdriver: 4.41.0
 
   '@babel/helper-string-parser@7.27.1': {}
 
@@ -3509,7 +3509,7 @@ snapshots:
     dependencies:
       readdirp: 5.0.0
 
-  chromedriver@147.0.3:
+  chromedriver@147.0.4:
     dependencies:
       '@testim/chrome-version': 1.1.4
       axios: 1.15.0
@@ -3658,7 +3658,7 @@ snapshots:
       domelementtype: 2.3.0
       domhandler: 5.0.3
 
-  dotenv@17.4.1: {}
+  dotenv@17.4.2: {}
 
   dset@3.1.4: {}
 
@@ -4795,7 +4795,7 @@ snapshots:
     dependencies:
       xmlchars: 2.2.0
 
-  selenium-webdriver@4.39.0:
+  selenium-webdriver@4.41.0:
     dependencies:
       '@bazel/runfiles': 6.5.0
       jszip: 3.10.1
