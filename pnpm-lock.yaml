@@ -23,7 +23,7 @@ importers:
     devDependencies:
       '@axe-core/cli':
         specifier: ^4.11.1
-        version: 4.11.2
+        version: 4.11.3
       '@axe-core/playwright':
         specifier: ^4.11.1
         version: 4.11.2(playwright-core@1.59.1)
@@ -112,8 +112,8 @@ packages:
   '@astrojs/yaml2ts@0.2.3':
     resolution: {integrity: sha512-PJzRmgQzUxI2uwpdX2lXSHtP4G8ocp24/t+bZyf5Fy0SZLSF9f9KXZoMlFM/XCGue+B0nH/2IZ7FpBYQATBsCg==}
 
-  '@axe-core/cli@4.11.2':
-    resolution: {integrity: sha512-KTPKM0xqkdgrOrLM1BbxLHvcuPC7L8LCZR9IJK73CBe2hYWmMfrNqNW7kO0s680sHpF1Z/1yaebCfS+cuy4IpA==}
+  '@axe-core/cli@4.11.3':
+    resolution: {integrity: sha512-l6cbHsawKr8G0taTfFNKHghZr703cVGQ5+o53CmCoAW53x4KIuQ6T6bXFwW/8odh92JVMqHzBJi84QH0ne+paw==}
     engines: {node: '>=8'}
     hasBin: true
 
@@ -122,8 +122,8 @@ packages:
     peerDependencies:
       playwright-core: '>= 1.0.0'
 
-  '@axe-core/webdriverjs@4.11.2':
-    resolution: {integrity: sha512-ixw2oNvwP6MRcyJOnn9/kry+d3LW/4QYgerAK/a9KV9YzdTtIfzRWlwLn9NQAEa0jcxcCVj8l01tVZrjqSVp6A==}
+  '@axe-core/webdriverjs@4.11.3':
+    resolution: {integrity: sha512-JGaYFUQq2Jebo7JOve/HZFnoxlNKKCfLSUuZKaZro+TKy2Fh1uPFeNBdCt+zzxa8+7YMkIKmDieGPIQLLuWJRg==}
     peerDependencies:
       selenium-webdriver: '>3.0.0-beta  || >=2.53.1 || >4.0.0-alpha'
 
@@ -1013,6 +1013,10 @@ packages:
     resolution: {integrity: sha512-zBQouZixDTbo3jMGqHKyePxYxr1e5W8UdTmBQ7sNtaA9M2bE32daxxPLS/jojhKOHxQ7LWwPjfiwf/fhaJWzlg==}
     engines: {node: '>=4'}
 
+  axe-core@4.11.4:
+    resolution: {integrity: sha512-KunSNx+TVpkAw/6ULfhnx+HWRecjqZGTOyquAoWHYLRSdK1tB5Ihce1ZW+UY3fj33bYAFWPu7W/GRSmmrCGuxA==}
+    engines: {node: '>=4'}
+
   axios@1.15.2:
     resolution: {integrity: sha512-wLrXxPtcrPTsNlJmKjkPnNPK2Ihe0hn0wGSaTEiHRPxwjvJwT3hKmXF4dpqxmPO9SoNb2FsYXj/xEo0gHN+D5A==}
 
@@ -1023,8 +1027,8 @@ packages:
   bail@2.0.2:
     resolution: {integrity: sha512-0xO6mYd7JB2YesxDKplafRpsiOzPt9V02ddPCLbY1xYGPOX24NTyN50qnUxgCPcSoYMhKpAuBTjQoRZCAkUDRw==}
 
-  basic-ftp@5.3.0:
-    resolution: {integrity: sha512-5K9eNNn7ywHPsYnFwjKgYH8Hf8B5emh7JKcPaVjjrMJFQQwGpwowEnZNEtHs7DfR7hCZsmaK3VA4HUK0YarT+w==}
+  basic-ftp@5.3.1:
+    resolution: {integrity: sha512-bopVNp6ugyA150DDuZfPFdt1KZ5a94ZDiwX4hMgZDzF+GttD80lEy8kj98kbyhLXnPvhtIo93mdnLIjpCAeeOw==}
     engines: {node: '>=10.0.0'}
 
   bidi-js@1.0.3:
@@ -1060,8 +1064,8 @@ packages:
     resolution: {integrity: sha512-TQMmc3w+5AxjpL8iIiwebF73dRDF4fBIieAqGn9RGCWaEVwQ6Fb2cGe31Yns0RRIzii5goJ1Y7xbMwo1TxMplw==}
     engines: {node: '>= 20.19.0'}
 
-  chromedriver@148.0.0:
-    resolution: {integrity: sha512-H8doVBjmPAyC1z7qYtf/CDPsmOtFqPaMo96O9fNPN9niMacNLZgsuBuHyNxHZM8N7ciB4f4s8IGKDFt3YmvlCw==}
+  chromedriver@148.0.1:
+    resolution: {integrity: sha512-dlRbJqLAb7luLHNQ8pze7Qv9rVHHn+BwcOLbwa11PYfDgrISRZNtMTXm/kX0byZUsHF6mMQpAUPJ9T7oy87o9Q==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -1490,8 +1494,8 @@ packages:
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
 
-  ip-address@10.1.0:
-    resolution: {integrity: sha512-XXADHxXmvT9+CRxhXg56LJovE+bmWnEWB78LB83VZTprKTmaC5QfruXocxzTZ2Kl0DNwKuBdlIhjL8LeY8Sf8Q==}
+  ip-address@10.2.0:
+    resolution: {integrity: sha512-/+S6j4E9AHvW9SWMSEY9Xfy66O5PWvVEJ08O0y5JGyEKQpojb0K0GKpz/v5HJ/G0vi3D2sjGK78119oXZeE0qA==}
     engines: {node: '>= 12'}
 
   ip-regex@4.3.0:
@@ -2116,8 +2120,8 @@ packages:
     resolution: {integrity: sha512-pyp2YR3mNxAMu0mGLtzs4g7O3uT4/9sQOLAKcViAkaS9fJWkud7nmaf6ZREFqQEi24IPkBcjfHjXhPTUWjo3uA==}
     engines: {node: '>= 20'}
 
-  socks@2.8.7:
-    resolution: {integrity: sha512-HLpt+uLy/pxB+bum/9DzAgiKS8CX1EvbWxI4zlmgGCExImLdiad2iCwXT5Z4c9c3Eq8rP2318mPW2c+QbtjK8A==}
+  socks@2.8.8:
+    resolution: {integrity: sha512-NlGELfPrgX2f1TAAcz0WawlLn+0r3FyhhCRpFFK2CemXenPYvzMWWZINv3eDNo9ucdwme7oCHRY0Jnbs4aIkog==}
     engines: {node: '>= 10.0.0', npm: '>= 3.0.0'}
 
   source-map-js@1.2.1:
@@ -2702,11 +2706,11 @@ snapshots:
     dependencies:
       yaml: 2.8.3
 
-  '@axe-core/cli@4.11.2':
+  '@axe-core/cli@4.11.3':
     dependencies:
-      '@axe-core/webdriverjs': 4.11.2(selenium-webdriver@4.41.0)
-      axe-core: 4.11.3
-      chromedriver: 148.0.0
+      '@axe-core/webdriverjs': 4.11.3(selenium-webdriver@4.41.0)
+      axe-core: 4.11.4
+      chromedriver: 148.0.1
       colors: 1.4.0
       commander: 9.5.0
       dotenv: 17.4.2
@@ -2722,9 +2726,9 @@ snapshots:
       axe-core: 4.11.3
       playwright-core: 1.59.1
 
-  '@axe-core/webdriverjs@4.11.2(selenium-webdriver@4.41.0)':
+  '@axe-core/webdriverjs@4.11.3(selenium-webdriver@4.41.0)':
     dependencies:
-      axe-core: 4.11.3
+      axe-core: 4.11.4
       selenium-webdriver: 4.41.0
 
   '@babel/helper-string-parser@7.27.1': {}
@@ -3468,6 +3472,8 @@ snapshots:
 
   axe-core@4.11.3: {}
 
+  axe-core@4.11.4: {}
+
   axios@1.15.2:
     dependencies:
       follow-redirects: 1.16.0
@@ -3480,7 +3486,7 @@ snapshots:
 
   bail@2.0.2: {}
 
-  basic-ftp@5.3.0: {}
+  basic-ftp@5.3.1: {}
 
   bidi-js@1.0.3:
     dependencies:
@@ -3511,7 +3517,7 @@ snapshots:
     dependencies:
       readdirp: 5.0.0
 
-  chromedriver@148.0.0:
+  chromedriver@148.0.1:
     dependencies:
       '@testim/chrome-version': 1.1.4
       axios: 1.15.2
@@ -3846,7 +3852,7 @@ snapshots:
 
   get-uri@8.0.0:
     dependencies:
-      basic-ftp: 5.3.0
+      basic-ftp: 5.3.1
       data-uri-to-buffer: 8.0.0
       debug: 4.4.3
     transitivePeerDependencies:
@@ -3997,7 +4003,7 @@ snapshots:
 
   inherits@2.0.4: {}
 
-  ip-address@10.1.0: {}
+  ip-address@10.2.0: {}
 
   ip-regex@4.3.0: {}
 
@@ -4872,13 +4878,13 @@ snapshots:
     dependencies:
       agent-base: 9.0.0
       debug: 4.4.3
-      socks: 2.8.7
+      socks: 2.8.8
     transitivePeerDependencies:
       - supports-color
 
-  socks@2.8.7:
+  socks@2.8.8:
     dependencies:
-      ip-address: 10.1.0
+      ip-address: 10.2.0
       smart-buffer: 4.2.0
 
   source-map-js@1.2.1: {}
